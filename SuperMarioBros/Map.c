@@ -469,9 +469,7 @@ void mapInitialize(int stage)
 
 	case 42:
 
-
 		setMarioPos(0, 80);
-
 		// ¹Ù´Ú-È¸»öº®µ¹,°¡½Ã
 		for (int i = 0; i < 15; i++)
 		{
@@ -481,6 +479,8 @@ void mapInitialize(int stage)
 				setObjectToMap(getBackGroundObject(THORN), THORN_WIDTH, THORN_HEIGHT, i * THORN_WIDTH, HEIGHT - THORN_HEIGHT);
 				continue;
 			}
+			if (i >= 13)
+				continue;
 			setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
 		}
 		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 1 * BRICK_WIDTH, 4 * BRICK_HEIGHT);
@@ -503,6 +503,7 @@ void mapInitialize(int stage)
 		// °Å²Ù·ÎµÈÇÏ¾á¹®
 		setObjectToMap(getBackGroundObject(DOORWHITEREVERSE), 32, 16, 430, BRICK_HEIGHT);
 		break;
+
 
 	case 43:
 		
@@ -633,10 +634,9 @@ void mapInitialize(int stage)
 		// ÇÏ¾á¹®
 		setObjectToMap(getBackGroundObject(DOORWHITE), 32, 16, 435, HEIGHT - 16 - BRICK_HEIGHT);
 		break;
-
 	case 47:
 
-		setMarioPos(0, 100);
+		setMarioPos(0, 80);
 		// ¹Ù´Ú-È¸»öº®µ¹,°¡½Ã
 		for (int i = 0; i < 15; i++)
 		{
@@ -646,7 +646,7 @@ void mapInitialize(int stage)
 			if (i >= 5 && i <= 7)
 				setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 6 * BRICK_HEIGHT);
 			if (i == 11)
-				for (int j = 4; j <= 7; j++)
+				for (int j = 5; j <= 7; j++)
 					setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - j * BRICK_HEIGHT);
 			if (i >= 5 && i <= 7)
 			{
@@ -659,6 +659,7 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 1 * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 9 * BRICK_WIDTH, HEIGHT - 6 * BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 10 * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 10 * BRICK_WIDTH, HEIGHT - 4 * BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 12 * BRICK_WIDTH, HEIGHT - 8 * BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 13 * BRICK_WIDTH, HEIGHT - 8 * BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 14 * BRICK_WIDTH, HEIGHT - 8 * BRICK_HEIGHT);
@@ -672,6 +673,7 @@ void mapInitialize(int stage)
 		// °Å²Ù·ÎµÈÇÏ¾á¹®
 		setObjectToMap(getBackGroundObject(DOORWHITEREVERSE), 32, 16, 430, HEIGHT - 7 * BRICK_HEIGHT);
 		break;
+
 
 	case 48:
 
@@ -709,6 +711,15 @@ void mapInitialize(int stage)
 		// ¹Ù´Ú-È¸»öº®µ¹,°¡½Ã
 		for (int i = 0; i < 15; i++)
 			setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 2 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 3 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 3 * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 4 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 4 * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 4 * BRICK_WIDTH, HEIGHT - 4 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 7 * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 9 * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 11 * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
 
 		// ÄíÆÄ Á×ÀÌ´Â ¸ÁÄ¡
 		setObjectToMap(getBackGroundObject(HAMMER), 32, 16, 435, HEIGHT - 16 - BRICK_HEIGHT);

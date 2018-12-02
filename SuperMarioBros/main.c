@@ -133,6 +133,8 @@ DWORD WINAPI EnemyProcess(LPVOID j)
 		Podoboo_Move();
 		Podoboo_Gravity();
 
+		Koopa_Move();
+
 		Sleep(100);
 		if (isGameOver||nextStage) {
 			Sleep(3000);

@@ -3,7 +3,7 @@
 #include<stdio.h>
 #include "info.h"
 
-int stage = 2;
+int stage = 48;
 int world=1;
 int turn = 1;
 void LoadStage(int stage)
@@ -16,7 +16,7 @@ void LoadStage(int stage)
 	GumbaInitialize(stage);
 	PodobooInitialize(stage);
 	TurtleInitialize(stage);
-	//KoopaInitialize(stage);
+	KoopaInitialize(stage);
 	mapInitialize(stage);
 	ScreenInitialize();
 }
