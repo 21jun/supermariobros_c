@@ -9,6 +9,7 @@
 char PodobooMotion[2][PODOBOO_HEIGHT * PODOBOO_WIDTH];
 int PodobooNum = 0;
 
+
 typedef struct __podoboo {
 	COORD pos;
 	char *PodobooState;
@@ -40,6 +41,51 @@ void PodobooInitialize(int stage)
 			PDB[i].PodobooState = PodobooMotion[1];
 			PDB[i].pos.X = (5 + 4 * i)*BRICK_WIDTH;
 			PDB[i].pos.Y = HEIGHT - 2 * BRICK_HEIGHT;
+			PDB[i].isUp = 0;
+			PDB[i].isDown = 1;
+		}
+		break;
+
+	case 22:
+
+		PodobooNum = 1;
+
+
+		for (int i = 0; i < PodobooNum; i++)
+		{
+			PDB[i].PodobooState = PodobooMotion[1];
+			PDB[i].pos.X = (11)*BRICK_WIDTH;
+			PDB[i].pos.Y = HEIGHT - 3 * BRICK_HEIGHT;
+			PDB[i].isUp = 0;
+			PDB[i].isDown = 1;
+		}
+		break;
+
+
+	case 24:
+
+		PodobooNum = 1;
+
+
+		for (int i = 0; i < PodobooNum; i++)
+		{
+			PDB[i].PodobooState = PodobooMotion[1];
+			PDB[i].pos.X = (12)*BRICK_WIDTH;
+			PDB[i].pos.Y = HEIGHT - 3 * BRICK_HEIGHT;
+			PDB[i].isUp = 0;
+			PDB[i].isDown = 1;
+		}
+		break;
+
+	case 25:
+		PodobooNum = 1;
+		
+
+		for (int i = 0; i < PodobooNum; i++)
+		{
+			PDB[i].PodobooState = PodobooMotion[1];
+			PDB[i].pos.X = ( 5)*BRICK_WIDTH;
+			PDB[i].pos.Y = HEIGHT - 3* BRICK_HEIGHT;
 			PDB[i].isUp = 0;
 			PDB[i].isDown = 1;
 		}
@@ -150,12 +196,14 @@ void Podoboo_Gravity()
 
 }
 
+
+
 void Podoboo_Move()
 {
 	for (int i = 0; i < PodobooNum; i++)
 	{
 		if (PDB[i].isUp == 1) {
-			if (PDB[i].pos.Y<=HEIGHT-16*3)
+			if (PDB[i].pos.Y<=HEIGHT-(16*3))
 			{
 				PDB[i].isUp = 0;
 				PDB[i].isDown = 1;

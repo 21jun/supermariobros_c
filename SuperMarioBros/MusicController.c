@@ -142,3 +142,23 @@ void playPodobooSound()
 {
 	PlaySound(TEXT("laser.WAV"), NULL, SND_ASYNC);
 }
+
+void playStarSound()
+{
+	//PlaySound(TEXT("Star.WAV"), NULL, SND_ASYNC);
+	MCI_OPEN_PARMS mciOpen;   // MCI_OPEN_PARAMS 구조체 변수 
+	mciOpen.lpstrDeviceType = TEXT("waveaudio");  // mpegvideo : mp3, waveaudio : wav, avivideo : avi
+	mciOpen.lpstrElementName = TEXT("Star.wav");
+
+	mciSendCommand(0, MCI_OPEN,
+		MCI_OPEN_ELEMENT | MCI_OPEN_TYPE | MCI_OPEN_TYPE,
+		(DWORD)(LPVOID)&mciOpen);
+
+	// 재생
+	MCI_PLAY_PARMS mciPlay;
+	DWORD dwID = mciOpen.wDeviceID;
+
+
+
+	mciSendCommand(dwID, MCI_PLAY, MCI_DGV_PLAY_REPEAT, (DWORD)(LPVOID)&mciPlay);
+}

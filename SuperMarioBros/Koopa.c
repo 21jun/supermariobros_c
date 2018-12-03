@@ -186,15 +186,3 @@ void Koopa_Move()
 
 	//drawMap();
 }
-
-/*void Gumba_Die()
-{
-	if (GumbadetectCollisionObject(gb[i].gumbaState, GUMBA_WIDTH, GUMBA_HEIGHT, gb[i].pos.X, gb[i].pos.Y))
-		{
-			deleteObjectFromMap(gb[i].gumbaState, GUMBA_WIDTH, GUMBA_HEIGHT, gb[i].pos.X, gb[i].pos.Y);
-			//임시방편
-			gb[i].pos.X = 10;
-			gb[i].pos.Y = 50;
-		}
-
-}*/

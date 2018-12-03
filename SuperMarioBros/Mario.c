@@ -13,7 +13,7 @@ enum Motion { lSTAND, rSTAND, lWalk1, lWalk2, lWalk3, rWalk1, rWalk2, rWalk3, lJ
 static int isLoadedMario = 0;
 
 COORD MarioPos = { 0,0 };
-
+int isStar = 0;
 int isRunning = 0;
 int isRight = 0;
 int isLeft = 0;
@@ -44,7 +44,7 @@ void marioInitialize(int stage)
 	}
 	MarioPos.X = 0;
 	MarioPos.Y = 66;
-
+	isStar = 0;
 	MarioState = MarioMotion[rSTAND];	// initial motion is right stand
 }
 
@@ -273,7 +273,7 @@ extern int nextStage;
 void Mario_Hit()
 {
 	/* NPC/Àýº® Ãæµ¹Àº ¾ç¿· 4Ä­¾¿ ¿©À¯ÁÜ */
-	if (detectCollisionObject(MarioState, MARIO_WIDTH - 4 , MARIO_HEIGHT, MarioPos.X + 4 , MarioPos.Y)==1) {
+	if (detectCollisionObject(MarioState, MARIO_WIDTH - 4 , MARIO_HEIGHT, MarioPos.X + 4 , MarioPos.Y)==1 && isStar == 0) {
 		isGameOver = 1;
 	}
 	else if (detectCollisionObject(MarioState, MARIO_WIDTH, MARIO_HEIGHT, MarioPos.X, MarioPos.Y) == 2)

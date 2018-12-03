@@ -34,6 +34,9 @@
     <Filter Include="리소스 파일\NPC">
       <UniqueIdentifier>{56ce7f7d-cd3d-4c40-870b-d407e99606a2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="리소스 파일\Item">
+      <UniqueIdentifier>{18911275-d461-4658-8f2e-bc5141f359f2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BackGround.c">
@@ -76,6 +79,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Podoboo.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -298,6 +304,9 @@
     <Text Include="-.txt">
       <Filter>리소스 파일\Text</Filter>
     </Text>
+    <Text Include="star.txt">
+      <Filter>리소스 파일\Item</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <Media Include="Castle.wav">
@@ -322,6 +331,9 @@
       <Filter>리소스 파일\Music</Filter>
     </Media>
     <Media Include="Underground.wav">
+      <Filter>리소스 파일\Music</Filter>
+    </Media>
+    <Media Include="Star.wav">
       <Filter>리소스 파일\Music</Filter>
     </Media>
   </ItemGroup>

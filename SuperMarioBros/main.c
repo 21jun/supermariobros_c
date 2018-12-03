@@ -135,6 +135,8 @@ DWORD WINAPI EnemyProcess(LPVOID j)
 
 		Koopa_Move();
 
+		Item_die();
+
 		Sleep(100);
 		if (isGameOver||nextStage) {
 			Sleep(3000);

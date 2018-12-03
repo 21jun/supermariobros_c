@@ -142,6 +142,7 @@
     <ClCompile Include="BackGround.c" />
     <ClCompile Include="ConsoleBufferContoller.c" />
     <ClCompile Include="Gumba.c" />
+    <ClCompile Include="Item.c" />
     <ClCompile Include="Koopa.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Map.c" />
@@ -222,6 +223,7 @@
     <Text Include="S.txt" />
     <Text Include="SmallBush.txt" />
     <Text Include="SmallCloud.txt" />
+    <Text Include="star.txt" />
     <Text Include="T.txt" />
     <Text Include="Thorn.txt" />
     <Text Include="TurtleLeft.txt" />
@@ -237,6 +239,7 @@
     <Media Include="Jump.wav" />
     <Media Include="MainMusic.wav" />
     <Media Include="Mario dies.wav" />
+    <Media Include="Star.wav" />
     <Media Include="Underground.wav" />
     <Media Include="World Clear.wav" />
   </ItemGroup>

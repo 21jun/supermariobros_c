@@ -123,6 +123,19 @@ void TurtleInitialize(int stage)
 			tt[i].isRight = 1;
 		}
 		break;
+	case 22:
+		turtleNum = 1;
+
+		for (int i = 0; i < turtleNum; i++)
+		{
+			tt[i].turtleState = TurtleMotion[0];
+			tt[i].pos.X = (6+ 4 * i)*BRICK_WIDTH;
+			tt[i].pos.Y = 2* BRICK_HEIGHT;
+			tt[i].isLeft = 0;
+			tt[i].isRight = 1;
+		}
+		break;
+
 	case 43:
 
 		turtleNum = 2;
@@ -249,7 +262,7 @@ void Turtle_Move()
 			{
 				tt[i].isLeft = 0;
 				tt[i].isRight = 1;
-				return;
+				continue;
 			}
 			deleteObjectFromMap(tt[i].turtleState, TURTLE_WIDTH, TURTLE_HEIGHT, tt[i].pos.X, tt[i].pos.Y);
 			setTurtleMotion(i, d % 2);
@@ -262,7 +275,7 @@ void Turtle_Move()
 			{
 				tt[i].isLeft = 1;
 				tt[i].isRight = 0;
-				return;
+				continue;
 			}
 
 			deleteObjectFromMap(tt[i].turtleState, TURTLE_WIDTH, TURTLE_HEIGHT, tt[i].pos.X, tt[i].pos.Y);
@@ -283,7 +296,7 @@ void Turtle_Die()
 {
 	for (int i = 0; i < turtleNum; i++)
 	{
-		if (GumbadetectCollisionObject(tt[i].turtleState, TURTLE_WIDTH, TURTLE_HEIGHT, tt[i].pos.X, tt[i].pos.Y))
+		if (EnemyDetectCollisionObject(tt[i].turtleState, TURTLE_WIDTH, TURTLE_HEIGHT, tt[i].pos.X, tt[i].pos.Y))
 		{
 			deleteObjectFromMap(tt[i].turtleState, TURTLE_WIDTH, TURTLE_HEIGHT, tt[i].pos.X, tt[i].pos.Y);
 			tt[i].isDead = 1;

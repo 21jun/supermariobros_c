@@ -179,7 +179,37 @@ void GumbaInitialize(int stage)
 		}
 
 		break;
-	//=====================================[WORLD 4]=====================================
+		//=====================================[WORLD 3]=====================================
+
+	case 21:
+		gumbaNum = 2;
+
+		for (int i = 0; i < gumbaNum; i++)
+		{
+			gb[i].gumbaState = GumbaMotion[0];
+			gb[i].pos.X = 200 + i * 80;
+			gb[i].pos.Y = 30;
+			gb[i].isLeft = 0;
+			gb[i].isRight = 1;
+		}
+
+		break;
+
+
+	case 23:
+		gumbaNum = 2;
+
+		for (int i = 0; i < gumbaNum; i++)
+		{
+			gb[i].gumbaState = GumbaMotion[0];
+			gb[i].pos.X = 200 + i * 80;
+			gb[i].pos.Y = 0 + i* 60;
+			gb[i].isLeft = 0;
+			gb[i].isRight = 1;
+		}
+
+		break;
+		//=====================================[WORLD 4]=====================================
 	case 42:
 		gumbaNum = 2;
 
@@ -286,7 +316,7 @@ void Gumba_Move()
 			{
 				gb[i].isLeft = 0;
 				gb[i].isRight = 1;
-				return;
+				continue;
 			}
 
 			deleteObjectFromMap(gb[i].gumbaState, GUMBA_WIDTH, GUMBA_HEIGHT, gb[i].pos.X, gb[i].pos.Y);
@@ -300,7 +330,7 @@ void Gumba_Move()
 			{
 				gb[i].isLeft = 1;
 				gb[i].isRight = 0;
-				return;
+				continue;
 			}
 
 			deleteObjectFromMap(gb[i].gumbaState, GUMBA_WIDTH, GUMBA_HEIGHT, gb[i].pos.X, gb[i].pos.Y);
@@ -322,7 +352,7 @@ void Gumba_Die()
 	{
 		if (gb[i].isDead)
 			continue;
-		if (GumbadetectCollisionObject(gb[i].gumbaState, GUMBA_WIDTH, GUMBA_HEIGHT, gb[i].pos.X, gb[i].pos.Y))
+		if (EnemyDetectCollisionObject(gb[i].gumbaState, GUMBA_WIDTH, GUMBA_HEIGHT, gb[i].pos.X, gb[i].pos.Y))
 		{
 			deleteObjectFromMap(gb[i].gumbaState, GUMBA_WIDTH, GUMBA_HEIGHT, gb[i].pos.X, gb[i].pos.Y);
 			gb[i].isDead = 1;

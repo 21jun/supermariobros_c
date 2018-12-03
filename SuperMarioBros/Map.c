@@ -24,6 +24,9 @@ void mapInitialize(int stage)
 	case 1:
 		loadTextMap("Map2.txt", 1);
 		break;
+	case 2:
+		loadTextMap("Map1.txt", 1);
+		break;
 	case 4:
 		loadTextMap("Map4.txt", 1);
 		break;
@@ -442,6 +445,234 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(DOOR), 32, 16, 0, HEIGHT - 16 - 3 * BRICK_HEIGHT);
 
 		break;
+	//=====================================[WORLD 3]=====================================
+	case 21:
+		//배경 삽입
+		setObjectToMap(getBackGroundObject(SMALL_CLOUD), SMALL_CLOUD_WIDTH, SMALL_CLOUD_HEIGHT, 168, 10);
+		setObjectToMap(getBackGroundObject(SMALL_CLOUD), SMALL_CLOUD_WIDTH, SMALL_CLOUD_HEIGHT, 38, 10);
+		setObjectToMap(getBackGroundObject(SMALL_CLOUD), SMALL_CLOUD_WIDTH, SMALL_CLOUD_HEIGHT, 380, 20);
+		setObjectToMap(getBackGroundObject(SMALL_BUSH), SMALL_BUSH_WIDTH, SMALL_BUSH_HEIGHT, 60, HEIGHT - SMALL_BUSH_HEIGHT - BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(SMALL_BUSH), SMALL_BUSH_WIDTH, SMALL_BUSH_HEIGHT, 400, HEIGHT - SMALL_BUSH_HEIGHT - BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(SMALL_BUSH), SMALL_BUSH_WIDTH, SMALL_BUSH_HEIGHT, 260, HEIGHT - SMALL_BUSH_HEIGHT - BRICK_HEIGHT);
+
+
+		// 파이프
+		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 70, 110 - 2*PIPE_BODY_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 70, 110-PIPE_BODY_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 70, 110);
+
+		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 250, 110 - 2 * PIPE_BODY_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 250, 110 - PIPE_BODY_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 250, 110);
+
+
+		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 0, HEIGHT - BRICK_HEIGHT);
+		for (int i = 0; i < 13; i++)
+		{
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 64 + i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
+		}
+
+		// 아이템 박스
+
+		setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, 180, HEIGHT - 5*BRICK_HEIGHT);
+
+		
+
+		// 문
+		setObjectToMap(getBackGroundObject(DOOR), 32, 16, 420, HEIGHT - 16 - BRICK_HEIGHT);
+
+		break;
+
+	case 22:
+		//여기에 배경 삽입
+		setObjectToMap(getBackGroundObject(SMALL_CLOUD), SMALL_CLOUD_WIDTH, SMALL_CLOUD_HEIGHT, 168, 10);
+		setObjectToMap(getBackGroundObject(SMALL_CLOUD), SMALL_CLOUD_WIDTH, SMALL_CLOUD_HEIGHT, 38, 20);
+		setObjectToMap(getBackGroundObject(SMALL_BUSH), SMALL_BUSH_WIDTH, SMALL_BUSH_HEIGHT, 390, HEIGHT - SMALL_BUSH_HEIGHT - BRICK_HEIGHT);
+
+		// 바닥
+		for (int i = 1; i < 10; i++)
+		{
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
+		}
+		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT,  BRICK_WIDTH, HEIGHT - 2*BRICK_HEIGHT);
+		
+
+		for (int i = 12; i < 15; i++)
+		{
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
+		}
+		
+		// 바닥
+		for (int i = 0; i < 2; i++)
+		{
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 3*BRICK_HEIGHT);
+		}
+
+		// 바닥
+		for (int i = 11; i < 15; i++)
+		{
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
+		}
+
+		// 아이템박스
+		setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT,  12 *BRICK_WIDTH, HEIGHT - 7 * BRICK_HEIGHT);
+
+		//파이프
+
+		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 200, 108 - 2 * PIPE_BODY_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 200, 108 - PIPE_BODY_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 200, 108);
+
+		// 문
+		setObjectToMap(getBackGroundObject(DOOR), 32, 16, 420, HEIGHT - 16 - BRICK_HEIGHT);
+		break;
+	case 23:
+		//배경 삽입
+		setObjectToMap(getBackGroundObject(SMALL_CLOUD), SMALL_CLOUD_WIDTH, SMALL_CLOUD_HEIGHT, 168, 10);
+		setObjectToMap(getBackGroundObject(SMALL_CLOUD), SMALL_CLOUD_WIDTH, SMALL_CLOUD_HEIGHT, 38, 10);
+		setObjectToMap(getBackGroundObject(SMALL_CLOUD), SMALL_CLOUD_WIDTH, SMALL_CLOUD_HEIGHT, 380, 20);
+		setObjectToMap(getBackGroundObject(SMALL_BUSH), SMALL_BUSH_WIDTH, SMALL_BUSH_HEIGHT, 60, HEIGHT - SMALL_BUSH_HEIGHT - BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(SMALL_BUSH), SMALL_BUSH_WIDTH, SMALL_BUSH_HEIGHT, 400, HEIGHT - SMALL_BUSH_HEIGHT - BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(SMALL_BUSH), SMALL_BUSH_WIDTH, SMALL_BUSH_HEIGHT, 260, HEIGHT - SMALL_BUSH_HEIGHT - BRICK_HEIGHT);
+
+		// 바닥
+		for (int i = 0; i < 15; i++)
+		{
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
+		}
+
+		for (int i = 0; i < 3; i++)
+		{
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 2*BRICK_HEIGHT);
+		}
+
+		for (int i = 0; i < 2; i++)
+		{
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
+		}
+
+		for (int i = 12; i < 15; i++)
+		{
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
+		}
+
+		for (int i = 13; i < 15; i++)
+		{
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
+		}
+
+		// 아이템 박스 추가 일단 BRICK_BLUE
+
+		for (int i = 4; i < 11; i++)
+		{
+			if(i == 6 || i ==8)
+				setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 4 * BRICK_HEIGHT);
+			else
+				setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 4*BRICK_HEIGHT);
+		}
+		
+
+		for (int i = 4; i <	11; i++)
+		{
+			if(i == 5 || i == 9)
+				setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 7 * BRICK_HEIGHT);
+			else
+				setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i* BRICK_WIDTH, HEIGHT - 7 * BRICK_HEIGHT);	
+		}
+
+
+		// 하얀문
+		setObjectToMap(getBackGroundObject(DOORWHITE), 32, 16, 250, HEIGHT - 8 * BRICK_HEIGHT);
+		break;
+
+	case 24:
+		//코인 뿌리는 판
+		// 여기에 배경
+		setObjectToMap(getBackGroundObject(SMALL_CLOUD), SMALL_CLOUD_WIDTH, SMALL_CLOUD_HEIGHT, 320, 10);
+		setObjectToMap(getBackGroundObject(SMALL_CLOUD), SMALL_CLOUD_WIDTH, SMALL_CLOUD_HEIGHT, 106, 10);
+		setObjectToMap(getBackGroundObject(SMALL_CLOUD), SMALL_CLOUD_WIDTH, SMALL_CLOUD_HEIGHT, 220, 70);
+
+
+		// 바닥
+		for (int i = 0; i < 2; i++)
+		{
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT -2* BRICK_HEIGHT);
+		}
+
+		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 4 * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
+		
+		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 7 * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
+
+		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 10 * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
+
+		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 13 * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
+
+
+		for (int i = 3; i < 9; i++)
+		{
+			
+			if(i == 4 || i ==7)
+				setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
+			else
+				setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 5*BRICK_HEIGHT);
+		}
+
+
+		// 문
+		setObjectToMap(getBackGroundObject(DOOR), 32, 16, 13 * BRICK_WIDTH, HEIGHT - 2*BRICK_HEIGHT);
+
+		break;
+
+	case 25:
+		
+		// 바닥
+		for (int i = 0; i < 1; i++)
+		{
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
+		}
+
+
+		for (int i = 13; i < 15; i++)
+		{
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
+		}
+
+		//파이프
+
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 2 * BRICK_WIDTH, HEIGHT - 1 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 2 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 2 * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
+
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 7 * BRICK_WIDTH, HEIGHT - 1 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 7 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
+
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 10 * BRICK_WIDTH, HEIGHT - 1 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 10 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 10 * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 10 * BRICK_WIDTH, HEIGHT - 4 * BRICK_HEIGHT);
+
+
+		for (int i = 0; i < 15; i++)
+		{
+			if (i >= 4 && i <= 6)
+			{
+				setObjectToMap(getBackGroundObject(THORN), THORN_WIDTH, THORN_HEIGHT, i * THORN_WIDTH, HEIGHT - THORN_HEIGHT);
+				continue;
+			}
+		}
+
+
+
+
+		//코인추가
+
+		// 하얀문
+		setObjectToMap(getBackGroundObject(DOORWHITE), 32, 16, 440, HEIGHT-2*BRICK_HEIGHT);
+		break;
+
+
+
 	//=====================================[WORLD 4]=====================================
 	case 41:
 
@@ -498,7 +729,15 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 11 * BRICK_WIDTH, HEIGHT - 4 * BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 11 * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
 
-		//파이프 사이 굼바 추가
+		for (int i = 0; i < 15; i++)
+		{
+			if (i >= 4 && i <= 8 && i != 6)
+			{
+				setObjectToMap(getBackGroundObject(THORN), THORN_WIDTH, THORN_HEIGHT, i * THORN_WIDTH, HEIGHT - THORN_HEIGHT);
+				continue;
+			}
+
+		}
 
 		// 거꾸로된하얀문
 		setObjectToMap(getBackGroundObject(DOORWHITEREVERSE), 32, 16, 430, BRICK_HEIGHT);
@@ -856,12 +1095,14 @@ int detectCollisionObject(char img[], int imageWidth, int imageHeight, int xoffs
 
 																				// '7'은 코인테두리
 			if (Map[(x + xoffset) + WIDTH * (y + yoffset)] == '7') return 3;	//코인 획득
+
+
 		}
 	}
 	return 0;
 }
 
-int GumbadetectCollisionObject(char img[], int imageWidth, int imageHeight, int xoffset, int yoffset)
+int EnemyDetectCollisionObject(char img[], int imageWidth, int imageHeight, int xoffset, int yoffset)
 {
 	char tmp;
 
@@ -874,6 +1115,25 @@ int GumbadetectCollisionObject(char img[], int imageWidth, int imageHeight, int 
 	}
 	return NO;
 }
+
+int ItemDetectCollisionObject(char img[], int imageWidth, int imageHeight, int xoffset, int yoffset)
+{
+	char tmp;
+
+	for (int y = 0; y < imageHeight; y++)
+	{
+		for (int x = 0; x < imageWidth; x++)
+		{
+			// 아이템이 마리오(X,Y,Z)와 충돌한경우 탐색
+			if (Map[(x + xoffset) + WIDTH * (y + yoffset)] == 'X' || Map[(x + xoffset) + WIDTH * (y + yoffset)] == 'Y' || Map[(x + xoffset) + WIDTH * (y + yoffset)] == 'Z') {
+				return YES;
+			}
+
+		}
+	}
+	return NO;
+}
+
 
 
 void drawMap()	// should be replaced with camera
