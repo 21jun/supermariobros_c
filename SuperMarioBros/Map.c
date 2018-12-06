@@ -1062,8 +1062,8 @@ int detectCollisionMap(char img[], int imageWidth, int imageHeight, int xoffset,
 		{
 			tmp = img[x + imageWidth * y];
 			// 할지 말지 고민..
-			//if (tmp == '0')
-			//	continue;
+			if (tmp == '0')
+				continue;
 			if (Map[(x + xoffset) + WIDTH * (y + yoffset)] == '1')	// 1은 못지나감
 				return YES;
 		}

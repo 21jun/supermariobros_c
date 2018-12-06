@@ -12,7 +12,7 @@ void loadChar(char *fileName, char *dist, int width, int height);
 void drawScore();
 void clearScreen();
 void setObjectToScreen(char img[], int imageWidth, int imageHeight, int xoffset, int yoffset);
-
+static char UIConvertor(char x);
 
 
 void ScreenInitialize()
@@ -77,7 +77,7 @@ void loadChar(char *fileName, char *dist, int width, int height)
 		{
 			fscanf(fp, "%c", &tmp);
 			if ((tmp >= 'A' && tmp <= 'Z') || (tmp >= '0' && tmp <= '9'))
-				dist[x + width * y] = tmp;
+				dist[x + width * y] = UIConvertor(tmp);
 		}
 	}
 	fclose(fp);
@@ -166,4 +166,50 @@ void drawStage()
 {
 	deleteObjectFromMap(Numbers[2], NUMBER_WIDTH, NUMBER_HEIGHT, WIDTH - 80, 5);
 	setObjectToMap(Numbers[2], NUMBER_WIDTH, NUMBER_HEIGHT, WIDTH - 80, 5);
+}
+
+static char UIConvertor(char x)
+{
+	switch (x)
+	{
+
+	case 'A':
+		return 'a';
+	case 'B':
+		return 'b';
+	case 'C':
+		return 'c';
+	case 'D':
+		return 'd';
+	case 'E':
+		return 'e';
+	case 'F':
+		return 'f';
+	case 'G':
+		return 'g';
+	case 'H':
+		return 'h';
+	case 'I':
+		return 'i';
+	case 'J':
+		return 'j';
+	case 'K':
+		return 'k';
+	case 'L':
+		return 'l';
+	case 'M':
+		return 'm';
+	case 'N':
+		return 'n';
+	case 'O':
+		return 'o';
+	case 'P':
+		return 'p';
+
+	default:
+		return x;
+		break;
+	}
+
+	return 0;
 }

@@ -220,12 +220,6 @@
     <Text Include="pipe_top.txt">
       <Filter>리소스 파일\Object</Filter>
     </Text>
-    <Text Include="PodobooDown.txt">
-      <Filter>리소스 파일\Object</Filter>
-    </Text>
-    <Text Include="PodobooUp.txt">
-      <Filter>리소스 파일\Object</Filter>
-    </Text>
     <Text Include="Thorn.txt">
       <Filter>리소스 파일\Object</Filter>
     </Text>
@@ -307,6 +301,18 @@
     <Text Include="star.txt">
       <Filter>리소스 파일\Item</Filter>
     </Text>
+    <Text Include="WaterBallDown.txt">
+      <Filter>리소스 파일\NPC</Filter>
+    </Text>
+    <Text Include="PodobooDown.txt">
+      <Filter>리소스 파일\NPC</Filter>
+    </Text>
+    <Text Include="PodobooUp.txt">
+      <Filter>리소스 파일\NPC</Filter>
+    </Text>
+    <Text Include="WaterBallUp.txt">
+      <Filter>리소스 파일\NPC</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <Media Include="Castle.wav">
@@ -334,6 +340,9 @@
       <Filter>리소스 파일\Music</Filter>
     </Media>
     <Media Include="Star.wav">
+      <Filter>리소스 파일\Music</Filter>
+    </Media>
+    <Media Include="WaterBall.wav">
       <Filter>리소스 파일\Music</Filter>
     </Media>
   </ItemGroup>

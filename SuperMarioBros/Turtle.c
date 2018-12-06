@@ -44,7 +44,7 @@ void TurtleInitialize(int stage)
 		break;
 	case 2:
 
-		turtleNum = 2;
+		turtleNum = 0;
 
 		for (int i = 0; i < turtleNum; i++)
 		{
@@ -164,7 +164,7 @@ void TurtleInitialize(int stage)
 		break;
 	case 48:
 
-		turtleNum = 2;
+		turtleNum = 0;
 
 		for (int i = 0; i < turtleNum; i++)
 		{

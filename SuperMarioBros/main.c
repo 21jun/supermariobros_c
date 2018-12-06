@@ -92,12 +92,19 @@ int main()
 			Sleep(3000);
 			isGameOver = 0;
 
+			if (marioLife == 0) {
+				playGameOverSound();
+				Sleep(3000);
+				return;
+			}
+
 			drawMap();
 		}
 
 		if (nextStage == 1)
 		{
-
+			if (stage == 15) stage = 20;
+			if (stage == 25) stage = 30;
 			LoadStage(++stage);
 			drawGameOverScreen();
 			Sleep(3000);
@@ -105,6 +112,8 @@ int main()
 
 			drawMap();
 		}
+
+
 	}
 
 	playGameOverSound();
@@ -141,6 +150,8 @@ DWORD WINAPI EnemyProcess(LPVOID j)
 		if (isGameOver||nextStage) {
 			Sleep(3000);
 		}
+
+	
 	}
 }
 
@@ -155,6 +166,9 @@ DWORD WINAPI MarioProcess(LPVOID i)
 		Sleep(10);
 		if (isGameOver|| nextStage) {
 			Sleep(2000);
+		}
+		if (marioLife == 0) {
+			return;
 		}
 	}
 }

@@ -231,6 +231,8 @@
     <Text Include="TurtleRight.txt" />
     <Text Include="TurtleRightWalk.txt" />
     <Text Include="W.txt" />
+    <Text Include="WaterBallDown.txt" />
+    <Text Include="WaterBallUp.txt" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Castle.wav" />
@@ -241,6 +243,7 @@
     <Media Include="Mario dies.wav" />
     <Media Include="Star.wav" />
     <Media Include="Underground.wav" />
+    <Media Include="WaterBall.wav" />
     <Media Include="World Clear.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

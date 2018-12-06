@@ -143,6 +143,11 @@ void playPodobooSound()
 	PlaySound(TEXT("laser.WAV"), NULL, SND_ASYNC);
 }
 
+void playWaterBallSound()
+{
+	PlaySound(TEXT("WaterBall.WAV"), NULL, SND_ASYNC);
+}
+
 void playStarSound()
 {
 	//PlaySound(TEXT("Star.WAV"), NULL, SND_ASYNC);
