@@ -191,6 +191,7 @@
     <Text Include="I.txt" />
     <Text Include="ItemBox_O.txt" />
     <Text Include="ItemBox_X.txt" />
+    <Text Include="key.txt" />
     <Text Include="Koopa.txt" />
     <Text Include="KoopaFireLeft.txt" />
     <Text Include="KoopaFireRight.txt" />

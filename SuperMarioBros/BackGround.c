@@ -22,6 +22,7 @@ static char Thorn[THORN_HEIGHT * THORN_WIDTH];
 static char Hammer[16 * 32];
 static char Star[ITEM_HEIGHT * ITEM_WIDTH];
 static char Coin[ITEM_HEIGHT * ITEM_WIDTH];
+static char Key[ITEM_HEIGHT * ITEM_WIDTH];
 /*===============================Functions===============================*/
 static void objectConvertor(char *obj, int width, int height);
 void loadBackGroundObj(char *fileName, char *dist, int height, int width);
@@ -79,6 +80,9 @@ void BackGoundInitialize()
 
 	loadBackGroundObj("coin.txt", Coin, 32, 16);
 	backGroundObjs[COIN] = Coin;
+
+	loadBackGroundObj("key.txt", Key, 32, 16);
+	backGroundObjs[KEY] = Key;
 }
 static char bgConvertor(char x)
 {

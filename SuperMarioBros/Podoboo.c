@@ -17,6 +17,7 @@ typedef struct __podoboo {
 	int isDown;
 	int type;
 	int height;
+	int startPos;
 }Podoboo;
 #define MAX_PODOBOO_NUM 10
 
@@ -25,6 +26,7 @@ enum PDB_TYPE { FIRE, WATER };
 enum PDB_MOTION { FIRE_UP, FIRE_DOWN, WATER_UP, WATER_DOWN };
 /*===============================Functions===============================*/
 void loadPodoboo(char *fileName, int motion);
+void setPodoboo(int i ,int type, int height, int startPos, int x, int y);
 
 void PodobooInitialize(int stage)
 {
@@ -40,34 +42,26 @@ void PodobooInitialize(int stage)
 
 	case 1:
 		PodobooNum = 1;
+		setPodoboo(0, WATER, 7 , HEIGHT - PIPE_TOP_HEIGHT - PIPE_BODY_HEIGHT - BRICK_HEIGHT, 165, HEIGHT - 5 * BRICK_HEIGHT);
+		break;
+	
+	case 14:
 
+		PodobooNum = 3;
 		for (int i = 0; i < PodobooNum; i++)
 		{
-			PDB[i].type = WATER;
-			PDB[i].PodobooState = PodobooMotion[WATER_UP];
-			PDB[i].pos.X = (5 + 4 * i)*BRICK_WIDTH;
-			PDB[i].pos.Y = HEIGHT - 2 * BRICK_HEIGHT;
-			PDB[i].isUp = 0;
-			PDB[i].isDown = 1;
-			PDB[i].height = 5;
+			setPodoboo(i, WATER, 7, HEIGHT, 32 + 4 * i * BRICK_WIDTH, HEIGHT - i * BRICK_HEIGHT);
 		}
+
 		break;
+
 
 	case 22:
 
 		PodobooNum = 1;
 
+		setPodoboo(0, WATER, 7, HEIGHT - PIPE_TOP_HEIGHT - 2 * PIPE_BODY_HEIGHT - BRICK_HEIGHT, 220, HEIGHT - 5 * BRICK_HEIGHT);
 
-		for (int i = 0; i < PodobooNum; i++)
-		{
-			PDB[i].type = FIRE;
-			PDB[i].PodobooState = PodobooMotion[FIRE_UP];
-			PDB[i].pos.X = (11)*BRICK_WIDTH;
-			PDB[i].pos.Y = HEIGHT - 3 * BRICK_HEIGHT;
-			PDB[i].isUp = 0;
-			PDB[i].isDown = 1;
-			PDB[i].height = 3;
-		}
 		break;
 
 
@@ -85,6 +79,7 @@ void PodobooInitialize(int stage)
 			PDB[i].isUp = 0;
 			PDB[i].isDown = 1;
 			PDB[i].height = 3;
+			PDB[i].startPos = HEIGHT;
 		}
 		break;
 
@@ -101,6 +96,8 @@ void PodobooInitialize(int stage)
 			PDB[i].isUp = 0;
 			PDB[i].isDown = 1;
 			PDB[i].height = 3;
+			PDB[i].startPos = HEIGHT;
+
 		}
 		break;
 	case 41:
@@ -115,6 +112,8 @@ void PodobooInitialize(int stage)
 			PDB[i].isUp = 0;
 			PDB[i].isDown = 1;
 			PDB[i].height = 3;
+			PDB[i].startPos = HEIGHT;
+
 		}
 		break;
 	case 42:
@@ -129,6 +128,8 @@ void PodobooInitialize(int stage)
 			PDB[i].isUp = 0;
 			PDB[i].isDown = 1;
 			PDB[i].height = 3;
+			PDB[i].startPos = HEIGHT;
+
 		}
 		break;
 	case 45:
@@ -143,6 +144,8 @@ void PodobooInitialize(int stage)
 			PDB[i].isUp = 0;
 			PDB[i].isDown = 1;
 			PDB[i].height = 3;
+			PDB[i].startPos = HEIGHT;
+
 		}
 		break;
 	case 48:
@@ -150,13 +153,15 @@ void PodobooInitialize(int stage)
 
 		for (int i = 0; i < PodobooNum; i++)
 		{
-			PDB[i].type = FIRE;
+			PDB[i].type = WATER;
 			PDB[i].PodobooState = PodobooMotion[FIRE_UP];
 			PDB[i].pos.X = (4.5 + 3 * i)*BRICK_WIDTH;
 			PDB[i].pos.Y = HEIGHT - 2 * BRICK_HEIGHT;
 			PDB[i].isUp = 0;
 			PDB[i].isDown = 1;
 			PDB[i].height = 3;
+			PDB[i].startPos = HEIGHT;
+
 		}
 		break;
 	default:
@@ -185,6 +190,22 @@ void loadPodoboo(char *fileName, int motion)
 	fclose(fp);
 }
 
+void setPodoboo(int i, int type, int height, int startPos, int x, int y) {
+	PDB[i].type = type;
+	if(type == FIRE)
+		PDB[i].PodobooState = PodobooMotion[FIRE_UP];
+	else
+		PDB[i].PodobooState = PodobooMotion[WATER_UP];
+
+	PDB[i].startPos = startPos;
+	PDB[i].pos.X = x;
+	PDB[i].pos.Y = y;
+	PDB[i].isUp = 0;
+	PDB[i].isDown = 1;
+	PDB[i].height = height;
+}
+
+
 void setPodobooMotion(int PDBidx, int direction)
 {
 
@@ -204,7 +225,7 @@ void setPodobooMotion(int PDBidx, int direction)
 		PDB[PDBidx].PodobooState = PodobooMotion[WATER_DOWN];
 		break;
 	default:
-		//PDB[PDBidx].PodobooState = PodobooMotion[WATER_DOWN];
+		PDB[PDBidx].PodobooState = PodobooMotion[WATER_DOWN];
 		break;
 	}
 }
@@ -256,7 +277,7 @@ void Podoboo_Move()
 
 		}
 		else if (PDB[i].isDown == 1) {
-			if (PDB[i].pos.Y >= HEIGHT)
+			if (PDB[i].pos.Y >= PDB[i].startPos)
 			{
 				if (PDB[i].type == FIRE)
 					playPodobooSound();
@@ -264,7 +285,7 @@ void Podoboo_Move()
 					playWaterBallSound();
 				PDB[i].isUp = 1;
 				PDB[i].isDown = 0;
-				//Sleep(1000);
+			
 				return;
 			}
 

@@ -313,6 +313,9 @@
     <Text Include="WaterBallUp.txt">
       <Filter>리소스 파일\NPC</Filter>
     </Text>
+    <Text Include="key.txt">
+      <Filter>리소스 파일\Item</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <Media Include="Castle.wav">

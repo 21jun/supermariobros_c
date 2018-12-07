@@ -14,6 +14,8 @@ static int isLoadedMario = 0;
 
 COORD MarioPos = { 0,0 };
 int isStar = 0;
+int isFlower = 0;
+int isKey = 1;
 int isRunning = 0;
 int isRight = 0;
 int isLeft = 0;
@@ -45,6 +47,9 @@ void marioInitialize(int stage)
 	MarioPos.X = 0;
 	MarioPos.Y = 66;
 	isStar = 0;
+	isFlower = 1;
+	isKey = 1;
+
 	MarioState = MarioMotion[rSTAND];	// initial motion is right stand
 }
 
@@ -278,8 +283,10 @@ void Mario_Hit()
 	}
 	else if (detectCollisionObject(MarioState, MARIO_WIDTH, MARIO_HEIGHT, MarioPos.X, MarioPos.Y) == 2)
 	{
-		// ~ 다음단계 함수 부르기
-		nextStage = 1;
+		if (isKey == 1) {
+			// ~ 다음단계 함수 부르기
+			nextStage = 1;
+		}
 	}
 
 }
@@ -287,4 +294,9 @@ void Mario_Hit()
 COORD getMarioPos()
 {
 	return MarioPos;
+}
+
+void Mario_Fire_Attack()
+{
+
 }

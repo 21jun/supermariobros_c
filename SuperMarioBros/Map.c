@@ -400,6 +400,8 @@ void mapInitialize(int stage)
 
 	case 14:
 
+		setMarioPos(0, HEIGHT - 2 * BRICK_HEIGHT);
+
 		// √µ¿Â
 		for (int i = 0; i < 15; i++)
 		{
@@ -1110,7 +1112,10 @@ int EnemyDetectCollisionObject(char img[], int imageWidth, int imageHeight, int 
 	{
 		for (int x = 0; x < imageWidth; x++)
 		{
-			if (Map[(x + xoffset) + WIDTH * (y + yoffset)] == '9') return YES;
+			if (Map[(x + xoffset) + WIDTH * (y + yoffset)] == '9') return 1;
+
+			if (Map[(x + xoffset) + WIDTH * (y + yoffset)] == 'X' || (Map[(x + xoffset) + WIDTH * (y + yoffset)] == 'Y') || (Map[(x + xoffset) + WIDTH * (y + yoffset)] == 'Z'))
+				return 2;
 		}
 	}
 	return NO;

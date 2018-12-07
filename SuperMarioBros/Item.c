@@ -4,7 +4,7 @@
 #include "info.h"
 
 /*===============================Variables===============================*/
-static char Items[3][ITEM_HEIGHT * ITEM_WIDTH];
+static char Items[5][ITEM_HEIGHT * ITEM_WIDTH];
 int itemNum = 0;
 typedef struct __item {
 	COORD pos;
@@ -22,6 +22,14 @@ static char itemConvertor(char x);
 void Item_die();
 void setItem(int itemIndex, int type, int x, int y);
 
+
+extern int isStar;
+extern int isKey;
+/*
+	[주위사항]
+	KEY를 세팅할 스테이지에서는 isKey = 0 설정해야함
+
+*/
 void ItemInitialize(int stage)
 {
 
@@ -34,15 +42,29 @@ void ItemInitialize(int stage)
 	{
 	//=====================================[WORLD 1]=====================================
 	case 1:
-		itemNum = 1;
+		itemNum = 2;
+		isKey = 0;
 		setItem(0, COIN, 100, 30);
+		setItem(1, KEY, 200, 30);
 		break;
 
 	case 2:
 		itemNum = 1;
 		setItem(0, STAR, 0, 30);
 		break;
+	//=====================================[WORLD 2]=====================================
 
+	case 14:
+
+		itemNum = 7;
+		for (int i = 0; i < itemNum; i++)
+		{
+			setItem(i, COIN, 64 + i * 64, HEIGHT - 4 * BRICK_HEIGHT);
+		}
+
+		break;
+
+	//=====================================[WORLD 4]=====================================
 	case 43:
 		itemNum = 1;
 		setItem(0, STAR, 0, 30);
@@ -138,7 +160,6 @@ static char itemConvertor(char x)
 	return 0;
 }
 
-extern int isStar;
 void Item_die()
 {
 	for (int i = 0; i < itemNum; i++)
@@ -158,6 +179,12 @@ void Item_die()
 			{
 				playStarSound();
 				isStar = 1;
+				item[i].isDead = 1;
+				return;
+			}
+			else if (item[i].name == KEY)
+			{
+				isKey = 1;
 				item[i].isDead = 1;
 				return;
 			}
