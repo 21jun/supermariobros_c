@@ -369,5 +369,10 @@ void Gumba_Die()
 				gb[i].isDead = 1;
 			}
 		}
+		else if (op == 3)
+		{
+			deleteObjectFromMap(gb[i].gumbaState, GUMBA_WIDTH, GUMBA_HEIGHT, gb[i].pos.X, gb[i].pos.Y);
+			gb[i].isDead = 1;
+		}
 	}
 }

@@ -147,7 +147,7 @@ void scoreUp(int add)
 {
 	score += add;
 	if (score >= 10) {
-		//lifeUp();
+		Mario_LifeUP();
 		score = 0;
 	}
 	drawScore();

@@ -209,6 +209,7 @@
     <Text Include="Map2.txt" />
     <Text Include="Map4.txt" />
     <Text Include="Mario.txt" />
+    <Text Include="Mario_Fire.txt" />
     <Text Include="Mario_Jump_Left.txt" />
     <Text Include="Mario_Jump_Right.txt" />
     <Text Include="Mario_Stand_Left.txt" />

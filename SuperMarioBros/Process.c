@@ -87,10 +87,10 @@ void runGame() {
 						}
 						//drawMap();
 						break;
-					case 'N':
+					case 'K':
 						if (eventBuffer[i].Event.KeyEvent.bKeyDown == 0)
 						{
-							drawStage();
+							setMario_Fire_Attack();
 						}
 						break;
 					case 'C':

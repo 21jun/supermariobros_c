@@ -153,7 +153,7 @@ void PodobooInitialize(int stage)
 
 		for (int i = 0; i < PodobooNum; i++)
 		{
-			PDB[i].type = WATER;
+			PDB[i].type = FIRE;
 			PDB[i].PodobooState = PodobooMotion[FIRE_UP];
 			PDB[i].pos.X = (4.5 + 3 * i)*BRICK_WIDTH;
 			PDB[i].pos.Y = HEIGHT - 2 * BRICK_HEIGHT;

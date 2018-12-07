@@ -755,7 +755,7 @@ void mapInitialize(int stage)
 			setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, 0);
 			if (i >= 3 && i <= 11 && i != 7)
 			{
-				setObjectToMap(getBackGroundObject(THORN), THORN_WIDTH, THORN_HEIGHT, i * THORN_WIDTH, HEIGHT - THORN_HEIGHT);
+				setObjectToMap(getBackGroundObject(THORN), THORN_WIDTH, THORN_HEIGHT, i * THORN_WIDTH, HEIGHT - THORN_HEIGHT -1 );
 				setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, 5 * BRICK_HEIGHT);
 				continue;
 			}
@@ -1073,6 +1073,7 @@ int detectCollisionMap(char img[], int imageWidth, int imageHeight, int xoffset,
 	return NO;
 }
 
+// MARIO
 int detectCollisionObject(char img[], int imageWidth, int imageHeight, int xoffset, int yoffset)
 {
 	char tmp;
@@ -1116,6 +1117,9 @@ int EnemyDetectCollisionObject(char img[], int imageWidth, int imageHeight, int 
 
 			if (Map[(x + xoffset) + WIDTH * (y + yoffset)] == 'X' || (Map[(x + xoffset) + WIDTH * (y + yoffset)] == 'Y') || (Map[(x + xoffset) + WIDTH * (y + yoffset)] == 'Z'))
 				return 2;
+
+			if (Map[(x + xoffset) + WIDTH * (y + yoffset)] == '!')
+				return 3;
 		}
 	}
 	return NO;

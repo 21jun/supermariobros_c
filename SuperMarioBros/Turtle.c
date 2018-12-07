@@ -162,19 +162,6 @@ void TurtleInitialize(int stage)
 			tt[i].isRight = 1;
 		}
 		break;
-	case 48:
-
-		turtleNum = 0;
-
-		for (int i = 0; i < turtleNum; i++)
-		{
-			tt[i].turtleState = TurtleMotion[0];
-			tt[i].pos.X = (10 + 2 * i)*BRICK_WIDTH;
-			tt[i].pos.Y = HEIGHT - (3 + 2 * i) * BRICK_HEIGHT;
-			tt[i].isLeft = 0;
-			tt[i].isRight = 1;
-		}
-		break;
 	default:
 		turtleNum = 0;
 		break;
@@ -292,11 +279,32 @@ void Turtle_Move()
 	//drawMap();
 }
 
+extern int isStar;
 void Turtle_Die()
 {
 	for (int i = 0; i < turtleNum; i++)
 	{
-		if (EnemyDetectCollisionObject(tt[i].turtleState, TURTLE_WIDTH, TURTLE_HEIGHT, tt[i].pos.X, tt[i].pos.Y))
+		if (tt[i].isDead) {
+			deleteObjectFromMap(tt[i].turtleState, TURTLE_WIDTH, TURTLE_HEIGHT, tt[i].pos.X, tt[i].pos.Y);
+			continue;
+		}
+
+		int op = EnemyDetectCollisionObject(tt[i].turtleState, TURTLE_WIDTH, TURTLE_HEIGHT, tt[i].pos.X, tt[i].pos.Y);
+
+		if (op == 1)
+		{
+			deleteObjectFromMap(tt[i].turtleState, TURTLE_WIDTH, TURTLE_HEIGHT, tt[i].pos.X, tt[i].pos.Y);
+			tt[i].isDead = 1;
+		}
+		else if (op == 2)
+		{
+			if (isStar == 1)
+			{
+				deleteObjectFromMap(tt[i].turtleState, TURTLE_WIDTH, TURTLE_HEIGHT, tt[i].pos.X, tt[i].pos.Y);
+				tt[i].isDead = 1;
+			}
+		}
+		else if (op == 3)
 		{
 			deleteObjectFromMap(tt[i].turtleState, TURTLE_WIDTH, TURTLE_HEIGHT, tt[i].pos.X, tt[i].pos.Y);
 			tt[i].isDead = 1;

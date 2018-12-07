@@ -131,13 +131,13 @@ DWORD WINAPI EnemyProcess(LPVOID j)
 {
 	while(1)
 	{
+		Gumba_Die();
 		Gumba_Move();
 		Gumba_Gravity();
-		Gumba_Die();
-
+	
+		Turtle_Die();
 		Turtle_Move();
 		Turtle_Gravity();
-		Turtle_Die();
 
 		Podoboo_Move();
 		Podoboo_Gravity();
@@ -162,6 +162,7 @@ DWORD WINAPI MarioProcess(LPVOID i)
 		Mario_Hit();
 		Mario_Gravity();
 		Mario_Jump();
+		Mario_Fire_Attack();
 		drawMap();
 		Sleep(10);
 		if (isGameOver|| nextStage) {

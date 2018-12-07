@@ -208,6 +208,10 @@ int colorConvertor(char x)
 		return 96;
 	case 'Z':
 		return 224;
+	case '!':
+		return 192;
+	case 'q': 
+		return 224;
 
 	default:
 		break;

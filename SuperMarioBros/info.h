@@ -21,7 +21,7 @@
 #define GUMBA_HEIGHT 16
 #define GUMBA_WIDTH 32
 
-#define TURTLE_HEIGHT 32
+#define TURTLE_HEIGHT 24
 #define TURTLE_WIDTH 32
 
 #define KOOPA_HEIGHT 32

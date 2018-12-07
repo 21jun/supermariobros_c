@@ -316,6 +316,9 @@
     <Text Include="key.txt">
       <Filter>리소스 파일\Item</Filter>
     </Text>
+    <Text Include="Mario_Fire.txt">
+      <Filter>리소스 파일\Mario</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <Media Include="Castle.wav">
