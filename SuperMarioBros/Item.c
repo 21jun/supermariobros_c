@@ -184,6 +184,7 @@ void Item_die()
 			}
 			else if (item[i].name == KEY)
 			{
+				playPowerUpSound();
 				isKey = 1;
 				item[i].isDead = 1;
 				return;

@@ -348,5 +348,17 @@
     <Media Include="WaterBall.wav">
       <Filter>리소스 파일\Music</Filter>
     </Media>
+    <Media Include="1UpSound.wav">
+      <Filter>리소스 파일\Music</Filter>
+    </Media>
+    <Media Include="KickSound.wav">
+      <Filter>리소스 파일\Music</Filter>
+    </Media>
+    <Media Include="PipeSound.wav">
+      <Filter>리소스 파일\Music</Filter>
+    </Media>
+    <Media Include="PowerUpSound.wav">
+      <Filter>리소스 파일\Music</Filter>
+    </Media>
   </ItemGroup>
 </Project>

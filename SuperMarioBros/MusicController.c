@@ -148,6 +148,26 @@ void playWaterBallSound()
 	PlaySound(TEXT("WaterBall.WAV"), NULL, SND_ASYNC);
 }
 
+void play1UpSound()
+{
+	PlaySound(TEXT("1UpSound.WAV"), NULL, SND_ASYNC);
+}
+
+void playPipeSound()
+{
+	PlaySound(TEXT("PipeSound.WAV"), NULL, SND_ASYNC);
+}
+
+void playKickSound()
+{
+	PlaySound(TEXT("KickSound.WAV"), NULL, SND_ASYNC);
+}
+
+void playPowerUpSound()
+{
+	PlaySound(TEXT("PowerUpSound.WAV"), NULL, SND_ASYNC);
+}
+
 void playStarSound()
 {
 	//PlaySound(TEXT("Star.WAV"), NULL, SND_ASYNC);

@@ -236,12 +236,16 @@
     <Text Include="WaterBallUp.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Media Include="1UpSound.wav" />
     <Media Include="Castle.wav" />
     <Media Include="Coin.wav" />
     <Media Include="Game over.wav" />
     <Media Include="Jump.wav" />
+    <Media Include="KickSound.wav" />
     <Media Include="MainMusic.wav" />
     <Media Include="Mario dies.wav" />
+    <Media Include="PipeSound.wav" />
+    <Media Include="PowerUpSound.wav" />
     <Media Include="Star.wav" />
     <Media Include="Underground.wav" />
     <Media Include="WaterBall.wav" />
