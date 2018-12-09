@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BackGround.c" />
+    <ClCompile Include="Bird.c" />
     <ClCompile Include="ConsoleBufferContoller.c" />
     <ClCompile Include="Gumba.c" />
     <ClCompile Include="Item.c" />
@@ -171,6 +172,10 @@
     <Text Include="8.txt" />
     <Text Include="9.txt" />
     <Text Include="a.txt" />
+    <Text Include="BirdLeft1.txt" />
+    <Text Include="BirdLeft2.txt" />
+    <Text Include="BirdRight1.txt" />
+    <Text Include="BirdRight2.txt" />
     <Text Include="brick.txt" />
     <Text Include="brick_blue.txt" />
     <Text Include="brick_brown.txt" />
@@ -181,6 +186,7 @@
     <Text Include="DoorWhite.txt" />
     <Text Include="DoorWhiteReverse.txt" />
     <Text Include="E.txt" />
+    <Text Include="flower.txt" />
     <Text Include="G.txt" />
     <Text Include="GameOverScreen.txt" />
     <Text Include="Gumba.txt" />
@@ -221,6 +227,7 @@
     <Text Include="pipe_top.txt" />
     <Text Include="PodobooDown.txt" />
     <Text Include="PodobooUp.txt" />
+    <Text Include="Princess.txt" />
     <Text Include="R.txt" />
     <Text Include="S.txt" />
     <Text Include="SmallBush.txt" />
@@ -238,13 +245,17 @@
   </ItemGroup>
   <ItemGroup>
     <Media Include="1UpSound.wav" />
+    <Media Include="BossStage.wav" />
     <Media Include="Castle.wav" />
     <Media Include="Coin.wav" />
+    <Media Include="Ending.wav" />
     <Media Include="Game over.wav" />
+    <Media Include="GameClear.wav" />
     <Media Include="Jump.wav" />
     <Media Include="KickSound.wav" />
     <Media Include="MainMusic.wav" />
     <Media Include="Mario dies.wav" />
+    <Media Include="mario-yahoo.WAV" />
     <Media Include="PipeSound.wav" />
     <Media Include="PowerUpSound.wav" />
     <Media Include="Star.wav" />

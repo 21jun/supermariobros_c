@@ -136,7 +136,7 @@ void TurtleInitialize(int stage)
 		}
 		break;
 
-	case 43:
+	case 33:
 
 		turtleNum = 2;
 
@@ -149,7 +149,7 @@ void TurtleInitialize(int stage)
 			tt[i].isRight = 1;
 		}
 		break;
-	case 46:
+	case 36:
 
 		turtleNum = 3;
 

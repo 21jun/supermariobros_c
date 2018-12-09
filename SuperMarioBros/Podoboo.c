@@ -100,7 +100,7 @@ void PodobooInitialize(int stage)
 
 		}
 		break;
-	case 41:
+	case 31:
 		PodobooNum = 2;
 
 		for (int i = 0; i < PodobooNum; i++)
@@ -116,7 +116,7 @@ void PodobooInitialize(int stage)
 
 		}
 		break;
-	case 42:
+	case 32:
 		PodobooNum = 1;
 
 		for (int i = 0; i < PodobooNum; i++)
@@ -132,7 +132,7 @@ void PodobooInitialize(int stage)
 
 		}
 		break;
-	case 45:
+	case 35:
 		PodobooNum = 2;
 
 		for (int i = 0; i < PodobooNum; i++)
@@ -148,7 +148,7 @@ void PodobooInitialize(int stage)
 
 		}
 		break;
-	case 48:
+	case 38:
 		PodobooNum = 2;
 
 		for (int i = 0; i < PodobooNum; i++)

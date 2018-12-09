@@ -210,7 +210,7 @@ void GumbaInitialize(int stage)
 
 		break;
 		//=====================================[WORLD 4]=====================================
-	case 42:
+	case 32:
 		gumbaNum = 2;
 
 		for (int i = 0; i < gumbaNum; i++)
@@ -223,7 +223,7 @@ void GumbaInitialize(int stage)
 		}
 		break;
 
-	case 45:
+	case 35:
 		gumbaNum = 1;
 
 		for (int i = 0; i < gumbaNum; i++)
@@ -236,7 +236,7 @@ void GumbaInitialize(int stage)
 		}
 		break;
 
-	case 47:
+	case 37:
 		gumbaNum = 2;
 
 		for (int i = 0; i < gumbaNum; i++)

@@ -15,12 +15,14 @@ static int isLoadedMario = 0;
 
 // POSITION
 COORD MarioPos = { 0,0 };
-int isStar = 0;
-int isFlower = 0;
-int isKey = 1;
 int isRunning = 0;
 int isRight = 0;
 int isLeft = 0;
+
+// ITEM
+int isStar = 0;
+int isFlower = 0;
+int isKey = 1;
 
 // JUMP
 int isGround = 0;
@@ -69,7 +71,7 @@ void marioInitialize(int stage)
 	MarioPos.X = 0;
 	MarioPos.Y = 66;
 	isStar = 0;
-	isFlower = 1;
+	isFlower = 0;
 	isKey = 1;
 	fa.isDead = 1;
 	MarioState = MarioMotion[rSTAND];	// initial motion is right stand
@@ -349,6 +351,7 @@ void Mario_LifeUP()
 
 void setMario_Fire_Attack()
 {
+	if (!isFlower) return;
 	if (!isGround) return;
 
 	if (fa.isDead) {

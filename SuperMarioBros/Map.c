@@ -27,10 +27,12 @@ void mapInitialize(int stage)
 	case 2:
 		loadTextMap("Map1.txt", 1);
 		break;
+	case 3:
+		loadTextMap("Map4.txt", 1);
+		break;
 	case 4:
 		loadTextMap("Map4.txt", 1);
 		break;
-
 	default:
 		loadTextMap("Map1.txt", 1);
 		break;
@@ -676,7 +678,7 @@ void mapInitialize(int stage)
 
 
 	//=====================================[WORLD 4]=====================================
-	case 41:
+	case 31:
 
 		// 바닥-회색벽돌,가시
 		for (int i = 0; i < 15; i++)
@@ -700,7 +702,7 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(DOORWHITE), 32, 16, 420, HEIGHT - 16 - BRICK_HEIGHT);
 		break;
 
-	case 42:
+	case 32:
 
 		setMarioPos(0, 80);
 		// 바닥-회색벽돌,가시
@@ -731,22 +733,12 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 11 * BRICK_WIDTH, HEIGHT - 4 * BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 11 * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
 
-		for (int i = 0; i < 15; i++)
-		{
-			if (i >= 4 && i <= 8 && i != 6)
-			{
-				setObjectToMap(getBackGroundObject(THORN), THORN_WIDTH, THORN_HEIGHT, i * THORN_WIDTH, HEIGHT - THORN_HEIGHT);
-				continue;
-			}
-
-		}
-
 		// 거꾸로된하얀문
 		setObjectToMap(getBackGroundObject(DOORWHITEREVERSE), 32, 16, 430, BRICK_HEIGHT);
 		break;
 
 
-	case 43:
+	case 33:
 		
 
 		// 바닥-회색벽돌,가시
@@ -767,7 +759,7 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(DOORWHITE), 32, 16, 420, HEIGHT - 16 - BRICK_HEIGHT);
 		break;
 
-	case 44:
+	case 34:
 
 		// 바닥-회색벽돌,가시
 		for (int i = 0; i < 15; i++)
@@ -799,7 +791,7 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(DOORWHITE), 32, 16, 440, 2 * BRICK_HEIGHT);
 		break;
 
-	case 45:
+	case 35:
 
 		// 바닥-회색벽돌,가시
 		for (int i = 0; i < 15; i++)
@@ -850,7 +842,7 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(DOORWHITE), 32, 16, 20 + 10 * BRICK_WIDTH, 2 * BRICK_HEIGHT);
 		break;
 
-	case 46:
+	case 36:
 
 	
 		// 바닥-회색벽돌,가시
@@ -875,7 +867,7 @@ void mapInitialize(int stage)
 		// 하얀문
 		setObjectToMap(getBackGroundObject(DOORWHITE), 32, 16, 435, HEIGHT - 16 - BRICK_HEIGHT);
 		break;
-	case 47:
+	case 37:
 
 		setMarioPos(0, 80);
 		// 바닥-회색벽돌,가시
@@ -916,7 +908,7 @@ void mapInitialize(int stage)
 		break;
 
 
-	case 48:
+	case 38:
 
 		for (int i = 0; i < 15; i++)
 		{
@@ -947,7 +939,7 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(DOORBOSS), 64, 16, 0, HEIGHT - 8 * BRICK_HEIGHT);
 
 		break;
-	case 49:
+	case 39:
 
 		// 바닥-회색벽돌,가시
 		for (int i = 0; i < 15; i++)
@@ -966,12 +958,15 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(HAMMER), 32, 16, 435, HEIGHT - 16 - BRICK_HEIGHT);
 		//쿠파불러오기
 		break;
-	case 50:
+	case 41:
 
 		// 바닥-회색벽돌,가시
 		for (int i = 0; i < 15; i++)
 			setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
+
 		//공주불러오기
+		setObjectToMap(getBackGroundObject(PRINCESS), PRINCESS_WIDTH, PRINCESS_HEIGHT, 8 * BRICK_WIDTH, HEIGHT - 3*BRICK_HEIGHT);
+
 		break;
 	default:
 		break;
@@ -1093,10 +1088,10 @@ int detectCollisionObject(char img[], int imageWidth, int imageHeight, int xoffs
 			// '8' 은 문
 			if (Map[(x + xoffset) + WIDTH * (y + yoffset)] == '8') return 2;	//다음레벨
 
-																				// 'W' 은 하얀문
+			// 'W' 은 하얀문
 			if (Map[(x + xoffset) + WIDTH * (y + yoffset)] == 'W') return 2;	//다음레벨
 
-																				// '7'은 코인테두리
+			// '7'은 코인테두리
 			if (Map[(x + xoffset) + WIDTH * (y + yoffset)] == '7') return 3;	//코인 획득
 
 

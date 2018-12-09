@@ -84,6 +84,9 @@
     <ClCompile Include="Item.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Bird.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="info.h">
@@ -319,6 +322,24 @@
     <Text Include="Mario_Fire.txt">
       <Filter>리소스 파일\Mario</Filter>
     </Text>
+    <Text Include="Princess.txt">
+      <Filter>리소스 파일\Object</Filter>
+    </Text>
+    <Text Include="BirdLeft1.txt">
+      <Filter>리소스 파일\NPC</Filter>
+    </Text>
+    <Text Include="BirdLeft2.txt">
+      <Filter>리소스 파일\NPC</Filter>
+    </Text>
+    <Text Include="BirdRight1.txt">
+      <Filter>리소스 파일\NPC</Filter>
+    </Text>
+    <Text Include="BirdRight2.txt">
+      <Filter>리소스 파일\NPC</Filter>
+    </Text>
+    <Text Include="flower.txt">
+      <Filter>리소스 파일\Object</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <Media Include="Castle.wav">
@@ -361,6 +382,18 @@
       <Filter>리소스 파일\Music</Filter>
     </Media>
     <Media Include="PowerUpSound.wav">
+      <Filter>리소스 파일\Music</Filter>
+    </Media>
+    <Media Include="BossStage.wav">
+      <Filter>리소스 파일\Music</Filter>
+    </Media>
+    <Media Include="Ending.wav">
+      <Filter>리소스 파일\Music</Filter>
+    </Media>
+    <Media Include="GameClear.wav">
+      <Filter>리소스 파일\Music</Filter>
+    </Media>
+    <Media Include="mario-yahoo.WAV">
       <Filter>리소스 파일\Music</Filter>
     </Media>
   </ItemGroup>

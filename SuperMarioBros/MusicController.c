@@ -31,14 +31,15 @@ void playBackGroundMusic(int world, int turn)
 		mciOpen.lpstrElementName = TEXT("MainMusic.wav");
 		break;
 	case 3:
-		mciOpen.lpstrElementName = TEXT("MainMusic.wav");
+		mciOpen.lpstrElementName = TEXT("Castle.wav");
 		break;
 	case 4:
-		mciOpen.lpstrElementName = TEXT("Castle.wav");
+		mciOpen.lpstrElementName = TEXT("GameClear.wav");
 		break;
 	default:
 		break;
 	}
+
 	mciSendCommand(0, MCI_OPEN, MCI_OPEN_ELEMENT | MCI_OPEN_TYPE | MCI_OPEN_TYPE, (DWORD)(LPVOID)&mciOpen);
 	MCI_PLAY_PARMS mciPlay;
 	DWORD dwID = mciOpen.wDeviceID;
@@ -57,7 +58,7 @@ void stopBackGroundMusic(int world, int turn)
 
 
 	mciOpen.lpstrDeviceType = TEXT("waveaudio");  // mpegvideo : mp3, waveaudio : wav, avivideo : avi
-	switch (world)
+	switch ((world - 1) / 10)
 	{
 	case 0:
 		mciOpen.lpstrElementName = TEXT("MainMusic.wav");
@@ -69,10 +70,10 @@ void stopBackGroundMusic(int world, int turn)
 		mciOpen.lpstrElementName = TEXT("MainMusic.wav");
 		break;
 	case 3:
-		mciOpen.lpstrElementName = TEXT("MainMusic.wav");
+		mciOpen.lpstrElementName = TEXT("Castle.wav");
 		break;
 	case 4:
-		mciOpen.lpstrElementName = TEXT("Castle.wav");
+		mciOpen.lpstrElementName = TEXT("GameClear.wav");
 		break;
 	default:
 		break;

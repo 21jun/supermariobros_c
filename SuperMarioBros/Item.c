@@ -25,6 +25,7 @@ void setItem(int itemIndex, int type, int x, int y);
 
 extern int isStar;
 extern int isKey;
+extern int isFlower;
 /*
 	[주위사항]
 	KEY를 세팅할 스테이지에서는 isKey = 0 설정해야함
@@ -52,6 +53,12 @@ void ItemInitialize(int stage)
 		itemNum = 1;
 		setItem(0, STAR, 0, 30);
 		break;
+
+	case 3:
+
+		itemNum = 1;
+		setItem(0, FLOWER, 0, 30);
+		break;
 	//=====================================[WORLD 2]=====================================
 
 	case 14:
@@ -65,12 +72,12 @@ void ItemInitialize(int stage)
 		break;
 
 	//=====================================[WORLD 4]=====================================
-	case 43:
+	case 33:
 		itemNum = 1;
 		setItem(0, STAR, 0, 30);
 		break;
 
-	case 44:
+	case 34:
 		itemNum = 7;
 		for (int i = 0; i < 7; i++)
 		{
@@ -186,6 +193,13 @@ void Item_die()
 			{
 				playPowerUpSound();
 				isKey = 1;
+				item[i].isDead = 1;
+				return;
+			}
+			else if (item[i].name == FLOWER)
+			{
+				playPowerUpSound();
+				isFlower = 1;
 				item[i].isDead = 1;
 				return;
 			}

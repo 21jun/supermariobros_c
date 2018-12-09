@@ -6,6 +6,7 @@
 
 int isGameOver = 0;
 int nextStage = 0;
+int isGameClear = 0;
 extern int marioLife;
 extern int stage;
 DWORD WINAPI InputProcess(LPVOID);
@@ -105,6 +106,7 @@ int main()
 		{
 			if (stage == 15) stage = 20;
 			if (stage == 25) stage = 30;
+			if (stage == 39) stage = 40;
 			LoadStage(++stage);
 			drawGameOverScreen();
 			Sleep(3000);
@@ -131,11 +133,15 @@ DWORD WINAPI EnemyProcess(LPVOID j)
 {
 	while(1)
 	{
+		Bird_Die();
 		Gumba_Die();
+		Turtle_Die();
+
 		Gumba_Move();
 		Gumba_Gravity();
-	
-		Turtle_Die();
+
+		Bird_Move();
+
 		Turtle_Move();
 		Turtle_Gravity();
 
