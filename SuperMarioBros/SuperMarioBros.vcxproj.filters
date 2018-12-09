@@ -337,8 +337,14 @@
     <Text Include="BirdRight2.txt">
       <Filter>리소스 파일\NPC</Filter>
     </Text>
-    <Text Include="flower.txt">
+    <Text Include="barrier.txt">
       <Filter>리소스 파일\Object</Filter>
+    </Text>
+    <Text Include="flower.txt">
+      <Filter>리소스 파일\Item</Filter>
+    </Text>
+    <Text Include="castle.txt">
+      <Filter>리소스 파일\Back Ground</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>

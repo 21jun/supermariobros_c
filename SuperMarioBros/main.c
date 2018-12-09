@@ -107,12 +107,18 @@ int main()
 			if (stage == 15) stage = 20;
 			if (stage == 25) stage = 30;
 			if (stage == 39) stage = 40;
+			if (stage == 32) stage = 33;
 			LoadStage(++stage);
 			drawGameOverScreen();
 			Sleep(3000);
 			nextStage = 0;
 
 			drawMap();
+		}
+
+		if (isGameClear)
+		{
+			return;
 		}
 
 

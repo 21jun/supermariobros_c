@@ -44,13 +44,33 @@ void PodobooInitialize(int stage)
 		PodobooNum = 1;
 		setPodoboo(0, WATER, 7 , HEIGHT - PIPE_TOP_HEIGHT - PIPE_BODY_HEIGHT - BRICK_HEIGHT, 165, HEIGHT - 5 * BRICK_HEIGHT);
 		break;
+
+	case 11:
+
+		PodobooNum = 2;
+
+		setPodoboo(0, WATER, 7, HEIGHT - 4 * BRICK_HEIGHT, 3 * BRICK_WIDTH + 20, HEIGHT - 4 * BRICK_HEIGHT);
 	
+		setPodoboo(1, WATER, 7, HEIGHT - 4 * BRICK_HEIGHT, 8 * BRICK_WIDTH + 20, HEIGHT - 4 * BRICK_HEIGHT);
+
+		break;
+
+	case 12:
+
+		PodobooNum = 2;
+
+		setPodoboo(0, WATER, 8, HEIGHT- 16, 4 * BRICK_WIDTH , 16);
+
+		setPodoboo(1, WATER, 8, HEIGHT- 16, 8 * BRICK_WIDTH , 16);
+
+		break;
+
 	case 14:
 
 		PodobooNum = 3;
 		for (int i = 0; i < PodobooNum; i++)
 		{
-			setPodoboo(i, WATER, 7, HEIGHT, 32 + 4 * i * BRICK_WIDTH, HEIGHT - i * BRICK_HEIGHT);
+			setPodoboo(i, WATER, 7, HEIGHT, 32 + 4 * i * BRICK_WIDTH, 30 + i * BRICK_HEIGHT);
 		}
 
 		break;

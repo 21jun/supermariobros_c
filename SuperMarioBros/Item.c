@@ -61,6 +61,24 @@ void ItemInitialize(int stage)
 		break;
 	//=====================================[WORLD 2]=====================================
 
+	case 12:
+
+		isKey = 0;
+
+		itemNum = 1;
+		setItem(0, KEY, 7 * BRICK_WIDTH, 1 * BRICK_HEIGHT);
+
+		break;
+
+	case 13:
+
+		isKey = 0;
+
+		itemNum = 1;
+		setItem(0, KEY, 9 * BRICK_WIDTH, 5 * BRICK_HEIGHT);
+
+		break;
+
 	case 14:
 
 		itemNum = 7;
@@ -71,18 +89,34 @@ void ItemInitialize(int stage)
 
 		break;
 
-	//=====================================[WORLD 4]=====================================
-	case 33:
-		itemNum = 1;
-		setItem(0, STAR, 0, 30);
+	case 15:
+		isKey = 0;
+		itemNum = 2;
+		setItem(0, KEY, 420, 30);
+		setItem(1, FLOWER, 420, HEIGHT- 2 * 16);
 		break;
 
-	case 34:
+	//=====================================[WORLD 4]=====================================
+	case 32:
+		itemNum = 1;
+		setItem(0, COIN, BRICK_WIDTH, HEIGHT - 6 * BRICK_HEIGHT);
+		break;
+
+	case 36:
 		itemNum = 7;
-		for (int i = 0; i < 7; i++)
+		for (int i = 0; i < 6; i++)
 		{
-			setItem(i, COIN, 200 + i* ITEM_WIDTH, 106);
+			if (i < 3)
+				setItem(i, COIN, 3 * BRICK_WIDTH + i * ITEM_WIDTH, 2 * BRICK_HEIGHT);
+			else
+				setItem(i, COIN, 7 * BRICK_WIDTH + i * ITEM_WIDTH, 2 * BRICK_HEIGHT);
 		}
+		setItem(6, FLOWER, 2 * BRICK_WIDTH, 5 * BRICK_HEIGHT);
+
+		break;
+	case 37:
+		itemNum = 1;
+		setItem(0, STAR, 32, HEIGHT - 6 * BRICK_HEIGHT);
 		break;
 
 	default:
@@ -167,6 +201,7 @@ static char itemConvertor(char x)
 	return 0;
 }
 
+extern int stage;
 void Item_die()
 {
 	for (int i = 0; i < itemNum; i++)
@@ -194,6 +229,17 @@ void Item_die()
 				playPowerUpSound();
 				isKey = 1;
 				item[i].isDead = 1;
+
+				if (stage == 13)
+				{
+					GumbaInitialize(113);
+				}
+
+				if (stage == 15)
+				{
+					TurtleInitialize(115);
+				}
+
 				return;
 			}
 			else if (item[i].name == FLOWER)

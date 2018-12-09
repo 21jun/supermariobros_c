@@ -49,7 +49,6 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(SMALL_BUSH), SMALL_BUSH_WIDTH, SMALL_BUSH_HEIGHT, 360, HEIGHT - SMALL_BUSH_HEIGHT - BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(SMALL_BUSH), SMALL_BUSH_WIDTH, SMALL_BUSH_HEIGHT, 260, HEIGHT - SMALL_BUSH_HEIGHT - BRICK_HEIGHT);
 
-
 		// 오브젝트
 		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 150, 110 - PIPE_TOP_HEIGHT);
 		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 150, 110);
@@ -328,6 +327,8 @@ void mapInitialize(int stage)
 	//=====================================[WORLD 2]=====================================
 	case 11:
 
+		setMarioPos(35, 10);
+
 		// 천장
 		for (int i = 0; i < 12; i++)
 		{
@@ -345,6 +346,9 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 8 * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 8 * BRICK_WIDTH, HEIGHT - 4 * BRICK_HEIGHT);
 
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 3 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 3 * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 3 * BRICK_WIDTH, HEIGHT - 4 * BRICK_HEIGHT);
 
 
 		// 문
@@ -356,22 +360,23 @@ void mapInitialize(int stage)
 		// 천장
 		for (int i = 0; i < 15; i++)
 		{
+			if (i == 4 || i == 8) continue;
 			setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, 0);
 		}
 
 		// 바닥
 		for (int i = 0; i < 15; i++)
 		{
+			if (i == 4 || i == 8) continue;
 			setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
 		}
 
-		setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, 8 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
-		setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, 9 * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
-		setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, 9 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
-		setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, 10 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
-		setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, 10 * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
-		setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, 10 * BRICK_WIDTH, HEIGHT - 4 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, 5 *  BRICK_WIDTH, 4 * BRICK_HEIGHT);
 
+		for (int i = 0; i < 3; i++)
+		{
+			setObjectToMap(getBackGroundObject(THORN), THORN_WIDTH, THORN_HEIGHT, 5 * BRICK_WIDTH + i * THORN_WIDTH, HEIGHT - THORN_HEIGHT - BRICK_HEIGHT);
+		}
 
 		// 문
 		setObjectToMap(getBackGroundObject(DOOR), 32, 16, 420, HEIGHT - 16 - BRICK_HEIGHT);
@@ -441,12 +446,18 @@ void mapInitialize(int stage)
 		// 바닥
 		for (int i = 0; i < 13; i++)
 		{
-			setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
+			setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT - 8);
+		}
+
+		// 바닥
+		for (int i = 0; i < 13; i++)
+		{
+			setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, 2 * BRICK_WIDTH + i * BRICK_WIDTH, HEIGHT - 6 * BRICK_HEIGHT);
 		}
 		
-		setObjectToMap(getBackGroundObject(THORN), THORN_WIDTH, THORN_HEIGHT, THORN_WIDTH, HEIGHT - 4 * THORN_HEIGHT);
+		//setObjectToMap(getBackGroundObject(THORN), THORN_WIDTH, THORN_HEIGHT, 450, HEIGHT - 16 - 1 * THORN_HEIGHT);
 		// 문
-		setObjectToMap(getBackGroundObject(DOOR), 32, 16, 0, HEIGHT - 16 - 3 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(DOOR), 32, 16, 0, HEIGHT - 16 - 3 * BRICK_HEIGHT- 8);
 
 		break;
 	//=====================================[WORLD 3]=====================================
@@ -667,7 +678,7 @@ void mapInitialize(int stage)
 		}
 
 
-
+		setObjectToMap(getBackGroundObject(CASTLE), CASTLE_WIDTH, CASTLE_HEIGHT, WIDTH - CASTLE_WIDTH, HEIGHT- CASTLE_HEIGHT);
 
 		//코인추가
 
@@ -897,7 +908,9 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 13 * BRICK_WIDTH, HEIGHT - 8 * BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 14 * BRICK_WIDTH, HEIGHT - 8 * BRICK_HEIGHT);
 
-		//굼바2마리추가
+		//벽
+		setObjectToMap(getBackGroundObject(BARRIER), 4, 4, 4 * BRICK_WIDTH, HEIGHT - 6 * BRICK_HEIGHT - 4);
+		setObjectToMap(getBackGroundObject(BARRIER), 4, 4, 10 * BRICK_WIDTH, HEIGHT - 6 * BRICK_HEIGHT - 4);
 
 		//파이프
 		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 13 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
@@ -937,7 +950,8 @@ void mapInitialize(int stage)
 
 		//빨간문-보스맵
 		setObjectToMap(getBackGroundObject(DOORBOSS), 64, 16, 0, HEIGHT - 8 * BRICK_HEIGHT);
-
+		//벽
+		setObjectToMap(getBackGroundObject(BARRIER), 4, 4, 12 * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT - 4);
 		break;
 	case 39:
 
@@ -1094,7 +1108,7 @@ int detectCollisionObject(char img[], int imageWidth, int imageHeight, int xoffs
 			// '7'은 코인테두리
 			if (Map[(x + xoffset) + WIDTH * (y + yoffset)] == '7') return 3;	//코인 획득
 
-
+			if (Map[(x + xoffset) + WIDTH * (y + yoffset)] == 'T') return 5;	//게임클리어
 		}
 	}
 	return 0;

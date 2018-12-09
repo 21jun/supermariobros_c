@@ -112,17 +112,23 @@ void TurtleInitialize(int stage)
 		break;
 	case 15:
 
+		turtleNum = 0;
+		break;
+
+	case 115:
+
 		turtleNum = 3;
 
 		for (int i = 0; i < turtleNum; i++)
 		{
 			tt[i].turtleState = TurtleMotion[0];
-			tt[i].pos.X =   100 + i * 100;
-			tt[i].pos.Y = 60;
+			tt[i].pos.X = 100 + i * 100;
+			tt[i].pos.Y = 16;
 			tt[i].isLeft = 0;
 			tt[i].isRight = 1;
 		}
 		break;
+
 	case 22:
 		turtleNum = 1;
 

@@ -7,7 +7,6 @@
 char GumbaMotion[3][GUMBA_HEIGHT * GUMBA_WIDTH];
 static int isLoadedGumba = 0;
 int gumbaNum = 0;
-
 typedef struct __gumba {
 	COORD pos;
 	char *gumbaState;
@@ -154,18 +153,25 @@ void GumbaInitialize(int stage)
 
 		break;
 	case 13:
-		gumbaNum = 2;
+		gumbaNum = 0;
+		break;
+
+	case 113:
+		gumbaNum = 6;
 
 		for (int i = 0; i < gumbaNum; i++)
 		{
 			gb[i].gumbaState = GumbaMotion[0];
-			gb[i].pos.X = 150 + i * 240;
+			gb[i].pos.X = 150 + i * 50;
 			gb[i].pos.Y = 15;
+
+
 			gb[i].isLeft = 0;
 			gb[i].isRight = 1;
 		}
 
 		break;
+
 	case 14:
 		gumbaNum = 5;
 
@@ -223,6 +229,7 @@ void GumbaInitialize(int stage)
 		}
 		break;
 
+
 	case 35:
 		gumbaNum = 1;
 
@@ -248,6 +255,21 @@ void GumbaInitialize(int stage)
 			gb[i].isRight = 1;
 		}
 		break;
+
+
+	case 38:
+		gumbaNum = 1;
+
+		for (int i = 0; i < gumbaNum; i++)
+		{
+			gb[i].gumbaState = GumbaMotion[0];
+			gb[i].pos.X = 13 * BRICK_WIDTH;
+			gb[i].pos.Y = HEIGHT - 4 * BRICK_HEIGHT;
+			gb[i].isLeft = 0;
+			gb[i].isRight = 1;
+		}
+		break;
+
 	default:
 		gumbaNum = 0;
 		break;

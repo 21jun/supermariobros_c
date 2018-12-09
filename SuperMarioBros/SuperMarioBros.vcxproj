@@ -172,6 +172,7 @@
     <Text Include="8.txt" />
     <Text Include="9.txt" />
     <Text Include="a.txt" />
+    <Text Include="barrier.txt" />
     <Text Include="BirdLeft1.txt" />
     <Text Include="BirdLeft2.txt" />
     <Text Include="BirdRight1.txt" />
@@ -180,6 +181,7 @@
     <Text Include="brick_blue.txt" />
     <Text Include="brick_brown.txt" />
     <Text Include="brick_gray.txt" />
+    <Text Include="castle.txt" />
     <Text Include="D.txt" />
     <Text Include="Door.txt" />
     <Text Include="DoorBoss.txt" />

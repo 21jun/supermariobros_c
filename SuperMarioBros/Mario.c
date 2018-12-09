@@ -317,6 +317,7 @@ void Mario_Move(int direction)
 }
 
 extern int isGameOver;
+extern int isGameClear;
 extern int nextStage;
 void Mario_Hit()
 {
@@ -330,6 +331,10 @@ void Mario_Hit()
 			// ~ 다음단계 함수 부르기
 			nextStage = 1;
 		}
+	}
+	else if (detectCollisionObject(MarioState, MARIO_WIDTH, MARIO_HEIGHT, MarioPos.X, MarioPos.Y) == 5)
+	{
+		isGameClear = 1;
 	}
 
 }

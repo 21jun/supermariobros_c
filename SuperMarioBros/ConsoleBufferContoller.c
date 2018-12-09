@@ -200,6 +200,8 @@ int colorConvertor(char x)
 	case 'p':
 		return 240;
 
+	case 'T':			//공주 테두리
+		return 0;
 
 	//MARIO COLOR
 	case 'X':
