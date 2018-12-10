@@ -405,6 +405,9 @@ void Mario_Fire_Attack()
 {
 	static int d = 0;
 	int dy = 2;
+
+	if (fa.isDead) return;
+
 	if (fa.isDown)
 	{
 		dy = 2;

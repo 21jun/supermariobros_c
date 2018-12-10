@@ -3,7 +3,7 @@
 #include<stdio.h>
 #include "info.h"
 
-int stage = 39;
+int stage = 13;
 int world=1;
 int turn = 1;
 void LoadStage(int stage)

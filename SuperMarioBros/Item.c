@@ -44,9 +44,9 @@ void ItemInitialize(int stage)
 	//=====================================[WORLD 1]=====================================
 	case 1:
 		itemNum = 3;
-		setItem(0, COIN, 300, 60);
-		setItem(1, COIN, 332, 44);
-		setItem(2, COIN, 352, 60);
+		setItem(0, COIN, 150, 60);
+		setItem(1, COIN, 182, 40);
+		setItem(2, COIN, 230, 60);
 		break;
 
 	case 2:
@@ -57,7 +57,7 @@ void ItemInitialize(int stage)
 	case 3:
 
 		itemNum = 1;
-		setItem(0, FLOWER, 0, 30);
+		setItem(0, FLOWER, 0, 100);
 		break;
 	case 4:
 
