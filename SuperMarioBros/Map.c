@@ -245,9 +245,9 @@ void mapInitialize(int stage)
 			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
 		}
 
-		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 2 * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
-		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 2 * BRICK_WIDTH, HEIGHT - 7 * BRICK_HEIGHT);
-		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 4 * BRICK_WIDTH, HEIGHT - 6 * BRICK_HEIGHT);
+		//setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 2 * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
+		//setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 0 * BRICK_WIDTH, HEIGHT - 7 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 3 * BRICK_WIDTH, HEIGHT - 6 * BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 4 * BRICK_WIDTH, HEIGHT - 1 * BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 6 * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 6 * BRICK_WIDTH, HEIGHT - 7 * BRICK_HEIGHT);
@@ -319,10 +319,14 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 7 * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 9 * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
 
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 12 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 12 * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 12 * BRICK_WIDTH, HEIGHT - 4 * BRICK_HEIGHT);
+
 
 
 		// 문
-		setObjectToMap(getBackGroundObject(DOOR), 32, 16, 420, HEIGHT - 16 - BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(DOOR), 32, 16, 405, HEIGHT - 5 * BRICK_HEIGHT);
 		break;
 	//=====================================[WORLD 2]=====================================
 	case 11:
@@ -450,9 +454,9 @@ void mapInitialize(int stage)
 		}
 
 		// 바닥
-		for (int i = 0; i < 13; i++)
+		for (int i = 0; i < 12; i++)
 		{
-			setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, 2 * BRICK_WIDTH + i * BRICK_WIDTH, HEIGHT - 6 * BRICK_HEIGHT);
+			setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, 3 * BRICK_WIDTH + i * BRICK_WIDTH, HEIGHT - 6 * BRICK_HEIGHT);
 		}
 		
 		//setObjectToMap(getBackGroundObject(THORN), THORN_WIDTH, THORN_HEIGHT, 450, HEIGHT - 16 - 1 * THORN_HEIGHT);
@@ -472,8 +476,8 @@ void mapInitialize(int stage)
 
 
 		// 파이프
-		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 70, 110 - 2*PIPE_BODY_HEIGHT);
-		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 70, 110-PIPE_BODY_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 70, 110 - 2 * PIPE_BODY_HEIGHT);
+		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 70, 110 - PIPE_BODY_HEIGHT);
 		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 70, 110);
 
 		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 250, 110 - 2 * PIPE_BODY_HEIGHT);
@@ -489,9 +493,7 @@ void mapInitialize(int stage)
 
 		// 아이템 박스
 
-		setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, 180, HEIGHT - 5*BRICK_HEIGHT);
 
-		
 
 		// 문
 		setObjectToMap(getBackGroundObject(DOOR), 32, 16, 420, HEIGHT - 16 - BRICK_HEIGHT);
@@ -509,18 +511,18 @@ void mapInitialize(int stage)
 		{
 			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
 		}
-		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT,  BRICK_WIDTH, HEIGHT - 2*BRICK_HEIGHT);
-		
+		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
+
 
 		for (int i = 12; i < 15; i++)
 		{
 			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
 		}
-		
+
 		// 바닥
 		for (int i = 0; i < 2; i++)
 		{
-			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 3*BRICK_HEIGHT);
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
 		}
 
 		// 바닥
@@ -528,9 +530,8 @@ void mapInitialize(int stage)
 		{
 			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
 		}
+		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 12 * BRICK_WIDTH, HEIGHT - 6 * BRICK_HEIGHT);
 
-		// 아이템박스
-		setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT,  12 *BRICK_WIDTH, HEIGHT - 7 * BRICK_HEIGHT);
 
 		//파이프
 
@@ -558,7 +559,7 @@ void mapInitialize(int stage)
 
 		for (int i = 0; i < 3; i++)
 		{
-			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 2*BRICK_HEIGHT);
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
 		}
 
 		for (int i = 0; i < 2; i++)
@@ -580,20 +581,22 @@ void mapInitialize(int stage)
 
 		for (int i = 4; i < 11; i++)
 		{
-			if(i == 6 || i ==8)
+			if (i == 6 || i == 8)
 				setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 4 * BRICK_HEIGHT);
 			else
-				setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 4*BRICK_HEIGHT);
+				setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 4 * BRICK_HEIGHT);
 		}
-		
+		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 4 * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
 
-		for (int i = 4; i <	11; i++)
+
+		for (int i = 4; i < 11; i++)
 		{
-			if(i == 5 || i == 9)
-				setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 7 * BRICK_HEIGHT);
+			if (i == 5 || i == 9)
+				setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 7 * BRICK_HEIGHT - 2);
 			else
-				setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i* BRICK_WIDTH, HEIGHT - 7 * BRICK_HEIGHT);	
+				setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i* BRICK_WIDTH, HEIGHT - 7 * BRICK_HEIGHT - 2);
 		}
+		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 10 * BRICK_WIDTH, HEIGHT - 8 * BRICK_HEIGHT - 2);
 
 
 		// 하얀문
@@ -612,11 +615,11 @@ void mapInitialize(int stage)
 		for (int i = 0; i < 2; i++)
 		{
 			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
-			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT -2* BRICK_HEIGHT);
+			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
 		}
 
 		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 4 * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
-		
+
 		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 7 * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
 
 		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 10 * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
@@ -624,23 +627,26 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 13 * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
 
 
-		for (int i = 3; i < 9; i++)
+		for (int i = 4; i < 9; i++)
 		{
-			
-			if(i == 4 || i ==7)
+
+			if (i == 4 || i == 7)
 				setObjectToMap(getBackGroundObject(BRICK_BLUE), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
 			else
-				setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 5*BRICK_HEIGHT);
+				setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
 		}
+
+		setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, 8 * BRICK_WIDTH, HEIGHT - 6 * BRICK_HEIGHT);
+
 
 
 		// 문
-		setObjectToMap(getBackGroundObject(DOOR), 32, 16, 13 * BRICK_WIDTH, HEIGHT - 2*BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(DOOR), 32, 16, 7 * BRICK_WIDTH, HEIGHT - 6 * BRICK_HEIGHT);
 
 		break;
 
 	case 25:
-		
+
 		// 바닥
 		for (int i = 0; i < 1; i++)
 		{
@@ -648,7 +654,7 @@ void mapInitialize(int stage)
 		}
 
 
-		for (int i = 13; i < 15; i++)
+		for (int i = 10; i < 15; i++)
 		{
 			setObjectToMap(getBackGroundObject(BRICK), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
 		}
@@ -662,10 +668,6 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 7 * BRICK_WIDTH, HEIGHT - 1 * BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 7 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
 
-		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 10 * BRICK_WIDTH, HEIGHT - 1 * BRICK_HEIGHT);
-		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 10 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
-		setObjectToMap(getBackGroundObject(PIPE_BODY), PIPE_BODY_WIDTH, PIPE_BODY_HEIGHT, 10 * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
-		setObjectToMap(getBackGroundObject(PIPE_TOP), PIPE_TOP_WIDTH, PIPE_TOP_HEIGHT, 10 * BRICK_WIDTH, HEIGHT - 4 * BRICK_HEIGHT);
 
 
 		for (int i = 0; i < 15; i++)
@@ -678,12 +680,14 @@ void mapInitialize(int stage)
 		}
 
 
-		setObjectToMap(getBackGroundObject(CASTLE), CASTLE_WIDTH, CASTLE_HEIGHT, WIDTH - CASTLE_WIDTH, HEIGHT- CASTLE_HEIGHT);
+		setObjectToMap(getBackGroundObject(CASTLE), CASTLE_WIDTH, CASTLE_HEIGHT, 380, HEIGHT - 4 * BRICK_HEIGHT);
+
+		
 
 		//코인추가
 
 		// 하얀문
-		setObjectToMap(getBackGroundObject(DOORWHITE), 32, 16, 440, HEIGHT-2*BRICK_HEIGHT);
+		setObjectToMap(getBackGroundObject(DOORWHITE), 32, 16, 412, HEIGHT - 2 * BRICK_HEIGHT);
 		break;
 
 
@@ -703,7 +707,7 @@ void mapInitialize(int stage)
 			//아이템박스 추가
 			setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT);
 			if (i == 0 || i == 1)
-				for (int j = 1; j<4; j++)
+				for (int j = 1; j < 4; j++)
 					setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - j * BRICK_HEIGHT);
 			if (i == 2)
 				for (int j = 1; j < 3; j++)
@@ -750,7 +754,7 @@ void mapInitialize(int stage)
 
 
 	case 33:
-		
+
 
 		// 바닥-회색벽돌,가시
 		for (int i = 0; i < 15; i++)
@@ -758,7 +762,7 @@ void mapInitialize(int stage)
 			setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, 0);
 			if (i >= 3 && i <= 11 && i != 7)
 			{
-				setObjectToMap(getBackGroundObject(THORN), THORN_WIDTH, THORN_HEIGHT, i * THORN_WIDTH, HEIGHT - THORN_HEIGHT -1 );
+				setObjectToMap(getBackGroundObject(THORN), THORN_WIDTH, THORN_HEIGHT, i * THORN_WIDTH, HEIGHT - THORN_HEIGHT - 1);
 				setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, 5 * BRICK_HEIGHT);
 				continue;
 			}
@@ -778,7 +782,7 @@ void mapInitialize(int stage)
 			setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, 0);
 			if (i == 4)
 			{
-				for (int j = 4; j <15; j++)
+				for (int j = 4; j < 15; j++)
 					setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, j * BRICK_WIDTH, 5 * BRICK_HEIGHT);
 			}
 			if (i == 5)
@@ -808,6 +812,8 @@ void mapInitialize(int stage)
 		for (int i = 0; i < 15; i++)
 		{
 			setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, 0);
+			if (i == 13)
+				setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, 4 * BRICK_HEIGHT);
 			if (i == 3 || i == 4 || i == 6 || i == 7 || i == 13)
 			{
 				setObjectToMap(getBackGroundObject(THORN), THORN_WIDTH, THORN_HEIGHT, i * THORN_WIDTH, HEIGHT - THORN_HEIGHT);
@@ -843,19 +849,20 @@ void mapInitialize(int stage)
 			}
 			if (i >= 10 && i <= 11)
 				setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, 3 * BRICK_HEIGHT);
-			if (i >= 11 && i <= 12)
+			if (i == 13)
 				setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, 4 * BRICK_HEIGHT);
 			if (i == 14)
 				setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
 
 		}
+		setObjectToMap(getBackGroundObject(BARRIER), 4, 4, 13 * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT - 4);
 		// 하얀문
 		setObjectToMap(getBackGroundObject(DOORWHITE), 32, 16, 20 + 10 * BRICK_WIDTH, 2 * BRICK_HEIGHT);
 		break;
 
 	case 36:
 
-	
+
 		// 바닥-회색벽돌,가시
 		for (int i = 0; i < 15; i++)
 		{
@@ -967,10 +974,14 @@ void mapInitialize(int stage)
 		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 7 * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 9 * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
 		setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 11 * BRICK_WIDTH, HEIGHT - 5 * BRICK_HEIGHT);
-
+		for (int i = 0; i < 4; i++)
+			setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, i * BRICK_WIDTH, 2 * BRICK_HEIGHT);
 		// 쿠파 죽이는 망치
-		setObjectToMap(getBackGroundObject(HAMMER), 32, 16, 435, HEIGHT - 16 - BRICK_HEIGHT);
-		//쿠파불러오기
+		//setObjectToMap(getBackGroundObject(HAMMER), 32, 16, 435, HEIGHT - 16 - BRICK_HEIGHT);
+		//setObjectToMap(getBackGroundObject(BRICK_GRAY), BRICK_WIDTH, BRICK_HEIGHT, 13 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
+		// 거꾸로된하얀문
+		setObjectToMap(getBackGroundObject(DOORWHITEREVERSE), 32, 16, 10, 0);
+
 		break;
 	case 41:
 

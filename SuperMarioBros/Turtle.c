@@ -77,7 +77,7 @@ void TurtleInitialize(int stage)
 		{
 			tt[i].turtleState = TurtleMotion[0];
 			tt[i].pos.X = 280 + i * 110;
-			tt[i].pos.Y = 20;
+			tt[i].pos.Y = 50;
 			tt[i].isLeft = 1;
 			tt[i].isRight = 0;
 		}
@@ -92,7 +92,7 @@ void TurtleInitialize(int stage)
 		{
 			tt[i].turtleState = TurtleMotion[0];
 			tt[i].pos.X = 160 + i * 80;
-			tt[i].pos.Y = 10;
+			tt[i].pos.Y = 80;
 			tt[i].isLeft = 0;
 			tt[i].isRight = 1;
 		}
@@ -135,10 +135,10 @@ void TurtleInitialize(int stage)
 		for (int i = 0; i < turtleNum; i++)
 		{
 			tt[i].turtleState = TurtleMotion[0];
-			tt[i].pos.X = (6+ 4 * i)*BRICK_WIDTH;
-			tt[i].pos.Y = 2* BRICK_HEIGHT;
-			tt[i].isLeft = 0;
-			tt[i].isRight = 1;
+			tt[i].pos.X = 3 * BRICK_WIDTH + 20;
+			tt[i].pos.Y = HEIGHT - 3 * BRICK_HEIGHT;
+			tt[i].isLeft = 1;
+			tt[i].isRight = 0;
 		}
 		break;
 
@@ -168,6 +168,9 @@ void TurtleInitialize(int stage)
 			tt[i].isRight = 1;
 		}
 		break;
+
+
+
 	default:
 		turtleNum = 0;
 		break;

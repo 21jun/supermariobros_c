@@ -32,7 +32,7 @@ Koopa Kp[2];		//Koopa °´Ã¼
 KoopaFire fr;
 
 void loadKoopa(char *fileName, int motion);
-void Koopa_Spit();
+void Koopa_Spit(Koopa kp);
 
 void KoopaInitialize(int stage)
 {
@@ -163,7 +163,7 @@ void Koopa_Move()
 	Koopa_Spit(Kp[0]);
 		if (Kp[0].isLeft == 1) {			//¿ÞÂÊ
 			Kp[0].isShooting = 0;
-			if (detectCollisionMap(Kp[0].KoopaState, KOOPA_WIDTH, KOOPA_HEIGHT, Kp[0].pos.X - 1, Kp[0].pos.Y))
+			if (detectCollisionMap(Kp[0].KoopaState, KOOPA_WIDTH, KOOPA_HEIGHT, Kp[0].pos.X- 2, Kp[0].pos.Y))
 			{
 				setKoopaMotion(2);
 				d_base = 2;
@@ -202,7 +202,7 @@ void Koopa_Move()
 		}
 		else if (Kp[0].isRight == 1) {		//¿À¸¥ÂÊ
 			Kp[0].isShooting = 0;
-			if (detectCollisionMap(Kp[0].KoopaState, KOOPA_WIDTH, KOOPA_HEIGHT, Kp[0].pos.X+1, Kp[0].pos.Y) || Kp[0].pos.X+KOOPA_WIDTH>430)
+			if (detectCollisionMap(Kp[0].KoopaState, KOOPA_WIDTH, KOOPA_HEIGHT, Kp[0].pos.X+2, Kp[0].pos.Y))
 			{
 				setKoopaMotion(0);
 				d_base = 0;

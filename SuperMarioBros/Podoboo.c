@@ -40,11 +40,6 @@ void PodobooInitialize(int stage)
 	switch (stage)
 	{
 
-	case 1:
-		PodobooNum = 1;
-		setPodoboo(0, WATER, 7 , HEIGHT - PIPE_TOP_HEIGHT - PIPE_BODY_HEIGHT - BRICK_HEIGHT, 165, HEIGHT - 5 * BRICK_HEIGHT);
-		break;
-
 	case 11:
 
 		PodobooNum = 2;
@@ -92,7 +87,7 @@ void PodobooInitialize(int stage)
 
 		for (int i = 0; i < PodobooNum; i++)
 		{
-			PDB[i].type = FIRE;
+			PDB[i].type = WATER;
 			PDB[i].PodobooState = PodobooMotion[FIRE_UP];
 			PDB[i].pos.X = (12)*BRICK_WIDTH;
 			PDB[i].pos.Y = HEIGHT - 3 * BRICK_HEIGHT;
@@ -104,21 +99,12 @@ void PodobooInitialize(int stage)
 		break;
 
 	case 25:
-		PodobooNum = 1;
 
+		PodobooNum = 3;
+		setPodoboo(0, WATER, 7, HEIGHT, 4 * BRICK_WIDTH, HEIGHT - 1 * BRICK_HEIGHT);
+		setPodoboo(1, WATER, 7, HEIGHT, 5 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
+		setPodoboo(2, WATER, 7, HEIGHT, 6 * BRICK_WIDTH, HEIGHT - 1 * BRICK_HEIGHT);
 
-		for (int i = 0; i < PodobooNum; i++)
-		{
-			PDB[i].type = FIRE;
-			PDB[i].PodobooState = PodobooMotion[FIRE_UP];
-			PDB[i].pos.X = (5)*BRICK_WIDTH;
-			PDB[i].pos.Y = HEIGHT - 3 * BRICK_HEIGHT;
-			PDB[i].isUp = 0;
-			PDB[i].isDown = 1;
-			PDB[i].height = 3;
-			PDB[i].startPos = HEIGHT;
-
-		}
 		break;
 	case 31:
 		PodobooNum = 2;

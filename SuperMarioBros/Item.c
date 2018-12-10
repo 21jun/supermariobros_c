@@ -43,10 +43,10 @@ void ItemInitialize(int stage)
 	{
 	//=====================================[WORLD 1]=====================================
 	case 1:
-		itemNum = 2;
-		isKey = 0;
-		setItem(0, COIN, 100, 30);
-		setItem(1, KEY, 200, 30);
+		itemNum = 3;
+		setItem(0, COIN, 300, 60);
+		setItem(1, COIN, 332, 44);
+		setItem(2, COIN, 352, 60);
 		break;
 
 	case 2:
@@ -58,6 +58,29 @@ void ItemInitialize(int stage)
 
 		itemNum = 1;
 		setItem(0, FLOWER, 0, 30);
+		break;
+	case 4:
+
+		itemNum = 2;
+		for (int i = 0; i < itemNum; i++)
+		{
+			setItem(i, COIN, BRICK_WIDTH * 2 + i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT * (i + 3));
+		}
+		break;
+
+	case 6:
+
+		itemNum = 7;
+		for (int i = 0; i < itemNum; i++)
+		{
+			setItem(i, COIN, BRICK_WIDTH * 4 + i * BRICK_WIDTH, HEIGHT - BRICK_HEIGHT* 7);
+		}
+		break;
+
+	case 8:
+		itemNum = 1;
+		isKey = 0;
+		setItem(0, KEY, 0 , 20);
 		break;
 	//=====================================[WORLD 2]=====================================
 
@@ -90,18 +113,67 @@ void ItemInitialize(int stage)
 		break;
 
 	case 15:
-		isKey = 0;
-		itemNum = 2;
-		setItem(0, KEY, 420, 30);
-		setItem(1, FLOWER, 420, HEIGHT- 2 * 16);
+		itemNum = 24;
+		for (int i = 0; i < 8; i++)
+		{
+			setItem(i, COIN, 200 + i * 32, HEIGHT - 7 * BRICK_HEIGHT);
+		}
+		for (int i = 8; i < 16; i++)
+		{
+			setItem(i, COIN, 80 + (i-8) * 32, HEIGHT - 4 * BRICK_HEIGHT - 8);
+		}
+		for (int i = 16; i < 24; i++)
+		{
+			setItem(i, COIN, 100 + (i - 16) * 32, HEIGHT - 2 * BRICK_HEIGHT);
+		}
 		break;
 
+	//=====================================[WORLD 3]=====================================
+	case 22:
+		itemNum = 4;
+		setItem(0, COIN, 0, HEIGHT - 6 * BRICK_HEIGHT);
+		setItem(1, COIN, 2 * BRICK_WIDTH, HEIGHT - 6 * BRICK_HEIGHT);
+		setItem(2, COIN, 5 * BRICK_WIDTH, HEIGHT - 3 * BRICK_HEIGHT);
+
+		break;
+	case 23:
+
+		itemNum = 4;
+		for (int i = 0; i < 4; i++)
+		{
+			setItem(i, COIN, 160 + i * 30, HEIGHT - 6 * BRICK_HEIGHT + 10);
+		}
+
+
+
+		break;
+
+
+	case 24:
+
+		isKey = 0;
+		itemNum = 5;
+		for (int i = 0; i < 4; i++)
+		{
+			setItem(i, COIN, (4 + 3 * i) * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
+		}
+
+
+		setItem(4, KEY, 13 * BRICK_WIDTH, HEIGHT - 2 * BRICK_HEIGHT);
+
+		break;
 	//=====================================[WORLD 4]=====================================
 	case 32:
 		itemNum = 1;
 		setItem(0, COIN, BRICK_WIDTH, HEIGHT - 6 * BRICK_HEIGHT);
 		break;
-
+	case 34:
+		itemNum = 9;
+		for (int i = 0; i < 9; i++)
+		{
+			setItem(i, COIN, 160 + i * ITEM_WIDTH, 106);
+		}
+		break;
 	case 36:
 		itemNum = 7;
 		for (int i = 0; i < 6; i++)
@@ -117,6 +189,13 @@ void ItemInitialize(int stage)
 	case 37:
 		itemNum = 1;
 		setItem(0, STAR, 32, HEIGHT - 6 * BRICK_HEIGHT);
+		break;
+	case 39:
+		isKey = 0;
+		itemNum = 2;
+		//setItem(0, KEY, WIDTH-32, HEIGHT - 16 - BRICK_HEIGHT);
+		setItem(0, KEY, WIDTH - 32, HEIGHT - 5 * BRICK_HEIGHT);
+		setItem(1, FLOWER, 3 * BRICK_WIDTH, HEIGHT - 4 * BRICK_HEIGHT);
 		break;
 
 	default:
@@ -238,6 +317,11 @@ void Item_die()
 				if (stage == 15)
 				{
 					TurtleInitialize(115);
+				}
+
+				if (stage == 39)
+				{
+					BirdInitialize(139);
 				}
 
 				return;

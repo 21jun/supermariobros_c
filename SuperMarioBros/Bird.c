@@ -35,34 +35,124 @@ void BirdInitialize(int stage)
 	}
 	switch (stage)
 	{
-	case 1:
+
+	/*case 4:
+		birdNum = 2;
+
+		for (int i = 0; i < birdNum; i++)
+		{
+			bd[i].birdState = BirdMotion[1];
+			bd[i].pos.X = 50 + i * 200;
+			bd[i].pos.Y = 30;
+			bd[i].isLeft = 0;
+			bd[i].isRight = 1;
+		}
+		bd[1].isLeft = 1;
+		bd[1].isRight = 0;
+		break;
+
+	case 5:
+		birdNum = 1;
+		int i = 0;
+		bd[i].birdState = BirdMotion[1];
+		bd[i].pos.X = 50 + i * 200;
+		bd[i].pos.Y = 15;
+		bd[i].isLeft = 0;
+		bd[i].isRight = 1;
+		break;*/
+	case 21:
+		birdNum = 2;
+
+		for (int i = 0; i < birdNum; i++)
+		{
+			bd[i].birdState = BirdMotion[1];
+			bd[i].pos.X = 50 + i * 200;
+			bd[i].pos.Y = 30 + i * 30;
+			if (i % 2 == 0)
+			{
+				bd[i].isLeft = 0;
+				bd[i].isRight = 1;
+			}
+			else
+			{
+				bd[i].isLeft = 1;
+				bd[i].isRight = 0;
+			}
+
+		}
+		break;
+
+
+	case 24:
+		birdNum = 2;
+
+		for (int i = 0; i < birdNum; i++)
+		{
+			bd[i].birdState = BirdMotion[1];
+			bd[i].pos.X = 50 + i * 300;
+			bd[i].pos.Y = 20 + i * 60;
+			if (i % 2 == 0)
+			{
+				bd[i].isLeft = 0;
+				bd[i].isRight = 1;
+			}
+			else
+			{
+				bd[i].isLeft = 1;
+				bd[i].isRight = 0;
+			}
+
+		}
+		break;
+
+
+	case 25:
 		birdNum = 3;
 
 		for (int i = 0; i < birdNum; i++)
 		{
 			bd[i].birdState = BirdMotion[1];
-			bd[i].pos.X = 100 * 50 * i ;
-			bd[i].pos.Y = 10 + 25 * i;
-			bd[i].isLeft = 0;
-			bd[i].isRight = 1;
+			bd[i].pos.X = 50 + i * 150;
+			bd[i].pos.Y = 20 + i * 20;
+			if (i % 2 == 0)
+			{
+				bd[i].isLeft = 0;
+				bd[i].isRight = 1;
+			}
+			else
+			{
+				bd[i].isLeft = 1;
+				bd[i].isRight = 0;
+			}
+
 		}
 		break;
-	case 4:
-		birdNum = 1;
 
+	case 139:
+		birdNum = 2;
 		for (int i = 0; i < birdNum; i++)
 		{
 			bd[i].birdState = BirdMotion[1];
-			bd[i].pos.X = 50;
-			bd[i].pos.Y = 30;
-			bd[i].isLeft = 0;
-			bd[i].isRight = 1;
+			bd[i].pos.X = 150 + i * 150;
+			bd[i].pos.Y = 20 + i * 20;
+			if (i % 2 == 0)
+			{
+				bd[i].isLeft = 0;
+				bd[i].isRight = 1;
+			}
+			else
+			{
+				bd[i].isLeft = 1;
+				bd[i].isRight = 0;
+			}
+
 		}
 		break;
 	default:
 		birdNum = 0;
 		break;
 	}
+
 
 
 }

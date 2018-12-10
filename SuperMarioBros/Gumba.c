@@ -53,12 +53,12 @@ void GumbaInitialize(int stage)
 		break;
 
 	case 2:
-		gumbaNum = 2;
+		gumbaNum = 5;
 		for (int i = 0; i < gumbaNum; i++)
 		{
 			gb[i].gumbaState = GumbaMotion[0];
 			gb[i].pos.X = 45 + i * 60;
-			gb[i].pos.Y = 15;
+			gb[i].pos.Y = 75;
 			gb[i].isLeft = 0;
 			gb[i].isRight = 1;
 		}
@@ -84,7 +84,7 @@ void GumbaInitialize(int stage)
 		{
 			gb[i].gumbaState = GumbaMotion[0];
 			gb[i].pos.X = 185 + i * 140;
-			gb[i].pos.Y = 15;
+			gb[i].pos.Y = 55 + i * 30;
 			gb[i].isLeft = 0;
 			gb[i].isRight = 1;
 		}
@@ -97,7 +97,7 @@ void GumbaInitialize(int stage)
 		{
 			gb[i].gumbaState = GumbaMotion[0];
 			gb[i].pos.X = 45 + i * 140;
-			gb[i].pos.Y = 15;
+			gb[i].pos.Y = 55;
 			gb[i].isLeft = 0;
 			gb[i].isRight = 1;
 		}
@@ -152,17 +152,14 @@ void GumbaInitialize(int stage)
 		gb[0].isRight = 1;
 
 		break;
-	case 13:
-		gumbaNum = 0;
-		break;
 
 	case 113:
-		gumbaNum = 6;
+		gumbaNum = 5;
 
 		for (int i = 0; i < gumbaNum; i++)
 		{
 			gb[i].gumbaState = GumbaMotion[0];
-			gb[i].pos.X = 150 + i * 50;
+			gb[i].pos.X = 200 + i * 50;
 			gb[i].pos.Y = 15;
 
 
@@ -193,8 +190,8 @@ void GumbaInitialize(int stage)
 		for (int i = 0; i < gumbaNum; i++)
 		{
 			gb[i].gumbaState = GumbaMotion[0];
-			gb[i].pos.X = 200 + i * 80;
-			gb[i].pos.Y = 30;
+			gb[i].pos.X = 180 + i * 180;
+			gb[i].pos.Y = HEIGHT - 2 * BRICK_HEIGHT;
 			gb[i].isLeft = 0;
 			gb[i].isRight = 1;
 		}
@@ -209,7 +206,7 @@ void GumbaInitialize(int stage)
 		{
 			gb[i].gumbaState = GumbaMotion[0];
 			gb[i].pos.X = 200 + i * 80;
-			gb[i].pos.Y = 0 + i* 60;
+			gb[i].pos.Y = 0 + i * 60;
 			gb[i].isLeft = 0;
 			gb[i].isRight = 1;
 		}
@@ -269,7 +266,18 @@ void GumbaInitialize(int stage)
 			gb[i].isRight = 1;
 		}
 		break;
+	case 39:
+		gumbaNum = 3;
 
+		for (int i = 0; i < gumbaNum; i++)
+		{
+			gb[i].gumbaState = GumbaMotion[0];
+			gb[i].pos.X = (2 * i + 9)*BRICK_WIDTH;
+			gb[i].pos.Y = HEIGHT - 2 * BRICK_HEIGHT;
+			gb[i].isLeft = 0;
+			gb[i].isRight = 1;
+		}
+		break;
 	default:
 		gumbaNum = 0;
 		break;
