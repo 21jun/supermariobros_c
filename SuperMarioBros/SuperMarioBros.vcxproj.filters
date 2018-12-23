@@ -57,9 +57,6 @@
     <ClCompile Include="MusicController.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="OpeningScene.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="StageController.c">
       <Filter>소스 파일</Filter>
     </ClCompile>

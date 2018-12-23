@@ -162,8 +162,8 @@ void TurtleInitialize(int stage)
 		for (int i = 0; i < turtleNum; i++)
 		{
 			tt[i].turtleState = TurtleMotion[0];
-			tt[i].pos.X = (8 + 2 * i)*BRICK_WIDTH;
-			tt[i].pos.Y = HEIGHT - 3 * BRICK_HEIGHT;
+			tt[i].pos.X = (6 + 2 * i)*BRICK_WIDTH;
+			tt[i].pos.Y = HEIGHT - 1 * BRICK_HEIGHT - 24;
 			tt[i].isLeft = 0;
 			tt[i].isRight = 1;
 		}

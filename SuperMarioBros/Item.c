@@ -13,11 +13,11 @@ typedef struct __item {
 	int isDead;
 }Item;
 
-#define MAX_ITEM_NUM 10
+#define MAX_ITEM_NUM 30
 Item item[MAX_ITEM_NUM];		
 
 /*===============================Functions===============================*/
-void loadItem(char *fileName, int motion);
+void loadItem(char *fileName, int motion); 
 static char itemConvertor(char x);
 void Item_die();
 void setItem(int itemIndex, int type, int x, int y);
@@ -80,7 +80,7 @@ void ItemInitialize(int stage)
 	case 8:
 		itemNum = 1;
 		isKey = 0;
-		setItem(0, KEY, 0 , 20);
+		setItem(0, KEY, 20 , 20);
 		break;
 	//=====================================[WORLD 2]=====================================
 

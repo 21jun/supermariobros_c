@@ -94,7 +94,7 @@ void runGame() {
 						}
 						break;
 					case 'C':
-						clearBuffer();
+						nextStage = 1;
 						break;
 					case 'D':
 						Mario_Move(R);

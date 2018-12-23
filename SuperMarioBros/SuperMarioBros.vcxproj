@@ -149,7 +149,6 @@
     <ClCompile Include="Map.c" />
     <ClCompile Include="Mario.c" />
     <ClCompile Include="MusicController.c" />
-    <ClCompile Include="OpeningScene.c" />
     <ClCompile Include="Podoboo.c" />
     <ClCompile Include="Process.c" />
     <ClCompile Include="StageController.c" />
